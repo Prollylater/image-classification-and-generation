@@ -138,6 +138,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.closeButton)
 
+        self.main_header = QFrame(self.MainFrame)
+        self.main_header.setObjectName(u"main_header")
+        self.main_header.setGeometry(QRect(0, 0, 1111, 131))
+        self.main_header.setStyleSheet(u"background-color:transparent;")
+        self.main_header.setFrameShape(QFrame.StyledPanel)
+        self.main_header.setFrameShadow(QFrame.Raised)
         self.logo.raise_()
         self.circle1.raise_()
         self.circle2.raise_()
@@ -145,6 +151,7 @@ class Ui_MainWindow(object):
         self.classifyButton.raise_()
         self.circle4.raise_()
         self.generateButton.raise_()
+        self.main_header.raise_()
         self.windowNav.raise_()
 
         self.horizontalLayout.addWidget(self.MainFrame)

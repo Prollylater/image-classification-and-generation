@@ -45,6 +45,19 @@ class MainWindow(QMainWindow):
         #Close Window
         self.ui.closeButton.clicked.connect(lambda: self.close())
 
+        #Move window on mouse drag event on the title bar
+        def moveWindow(e):
+            #only accept when left button is clicked
+            if e.buttons() == Qt.LeftButton:
+                self.move(self.pos() + e.globalPos() - self.clickPosition)
+                self.clickPosition = e.globalPos()
+                e.accept()
+
+        #Add click event/mouse move event /drag event to the top header to move the window
+        self.ui.main_header.mouseMoveEvent = moveWindow
+
+
+
         #Show window
         self.show()
 
@@ -60,6 +73,11 @@ class MainWindow(QMainWindow):
                 QtGui.QGuiApplication.primaryScreen().availableGeometry(),
             ),
         )
+
+    # Mouse events to the window
+    def mousePressEvent(self, event):
+        # get current position of the mouse
+        self.clickPosition = event.globalPos()
 
 
 #executable command

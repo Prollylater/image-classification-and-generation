@@ -313,6 +313,25 @@ QPushButton:hover{
         </item>
        </layout>
       </widget>
+      <widget class="QFrame" name="main_header">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1111</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:transparent;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
       <zorder>logo</zorder>
       <zorder>circle1</zorder>
       <zorder>circle2</zorder>
@@ -320,6 +339,7 @@ QPushButton:hover{
       <zorder>classifyButton</zorder>
       <zorder>circle4</zorder>
       <zorder>generateButton</zorder>
+      <zorder>main_header</zorder>
       <zorder>windowNav</zorder>
      </widget>
     </item>
