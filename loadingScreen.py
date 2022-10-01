@@ -37,7 +37,7 @@ class MainWindow(QMainWindow):
         #Show window
         self.show()
 
-#e
+#executable command
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()

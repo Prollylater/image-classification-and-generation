@@ -59,8 +59,8 @@ image: url(:/images/Images/Banner.png);</string>
       <rect>
        <x>20</x>
        <y>20</y>
-       <width>171</width>
-       <height>71</height>
+       <width>221</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="styleSheet">

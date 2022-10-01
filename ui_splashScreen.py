@@ -13,10 +13,10 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-os.system('Pyrcc5 splash_screen.qrc -o splash_screen_rc.py')
+#os.system('Pyrcc5 splash_screen.qrc -o splash_screen_rc.py')
 
 
-# import splash_screen_rc
+import splash_screen_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
