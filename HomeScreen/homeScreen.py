@@ -39,6 +39,12 @@ class MainWindow(QMainWindow):
         #Apply shadow to central widget
         self.ui.centralwidget.setGraphicsEffect(self.shadow)
 
+        #Button click events
+        #Minimize window
+        self.ui.minimizeButton.clicked.connect(lambda: self.showMinimized())
+        #Close Window
+        self.ui.closeButton.clicked.connect(lambda: self.close())
+
         #Show window
         self.show()
 

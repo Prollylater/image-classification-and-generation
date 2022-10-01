@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb042a80-34a2-4ac0-878d-5dcc592c4dbf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/logoApp.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/logoApp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loadingScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/LoadingScreen/loadingScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/splashScreen.ui" beforeDir="false" afterPath="$PROJECT_DIR$/LoadingScreen/splashScreen.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/splash_screen.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/LoadingScreen/splash_screen.qrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/splash_screen_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/LoadingScreen/splash_screen_rc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui_splashScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/LoadingScreen/ui_splashScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeScreen/homeScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/homeScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
