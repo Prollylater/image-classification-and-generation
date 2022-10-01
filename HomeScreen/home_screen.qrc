@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="Images">
+    <file>../Images/close.png</file>
+    <file>../Images/circle1.png</file>
+    <file>../Images/circle2.png</file>
+    <file>../Images/minimize.png</file>
+    <file>../Images/logo.png</file>
+    <file>../Images/logoAppWhite.png</file>
+    <file>../Images/robot.png</file>
+  </qresource>
+</RCC>

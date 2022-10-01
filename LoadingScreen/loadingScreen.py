@@ -5,6 +5,8 @@ import sys
 import os
 import platform
 
+from PyQt5 import QtGui, QtCore
+from PyQt5.QtWidgets import QDesktopWidget
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import *
 from PySide2.QtGui import *
@@ -23,6 +25,9 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        #center the window
+        self.center()
+
 
         #Remove window title bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -49,6 +54,20 @@ class MainWindow(QMainWindow):
         #Show window
         self.show()
 
+    #Function to center the Main Widget
+    def center(self):
+        # center window
+        window = self.window()
+        window.setGeometry(
+            QtWidgets.QStyle.alignedRect(
+                QtCore.Qt.LeftToRight,
+                QtCore.Qt.AlignCenter,
+                window.size(),
+                QtGui.QGuiApplication.primaryScreen().availableGeometry(),
+            ),
+        )
+
+
     #Define appProgress functiion
     def appProgress(self):
             global progressBarValue
@@ -67,13 +86,19 @@ class MainWindow(QMainWindow):
                 from _ast import Lambda
                 QtCore.QTimer.singleShot(0,lambda :self.ui.loadingStatus.setText("Loading completed"))
 
+            elif progressBarValue < 20:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Please Wait"))
+
             elif progressBarValue < 40:
                 QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Generating App"))
 
-            elif progressBarValue < 70:
+            elif progressBarValue < 60:
                 QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Initializing A.I"))
 
-            elif progressBarValue < 90:
+            elif progressBarValue < 80:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Collecting Data"))
+
+            elif progressBarValue < 100:
                 QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Loading content"))
 
             #increase progressBarValue by 1 after time interval in millisecond;

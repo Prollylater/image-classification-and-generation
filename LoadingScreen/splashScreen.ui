@@ -44,8 +44,7 @@ border-radius: 20px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/images/Images/robot.png);
-image: url(:/images/Images/Banner.png);</string>
+      <string notr="true">image: url(:/Images/Images/Banner.png);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -57,14 +56,15 @@ image: url(:/images/Images/Banner.png);</string>
     <widget class="QFrame" name="logo">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>0</x>
        <y>20</y>
        <width>241</width>
        <height>91</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/images/Images/logoApp.png);</string>
+      <string notr="true">image: url(:/Images/Images/logoApp.png);
+background-color:transparent;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -83,7 +83,7 @@ image: url(:/images/Images/Banner.png);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/images/Images/descApp.png);</string>
+      <string notr="true">image: url(:/Images/Images/descApp.png);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
