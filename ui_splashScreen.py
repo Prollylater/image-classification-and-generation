@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-import os
 
 ################################################################################
-## Form generated from reading UI file 'splashScreenvCjTMK.ui'
+## Form generated from reading UI file 'splashScreen.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,9 +11,6 @@ import os
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-
-#os.system('Pyrcc5 splash_screen.qrc -o splash_screen_rc.py')
-
 
 import splash_screen_rc
 
@@ -29,20 +25,20 @@ class Ui_MainWindow(object):
         self.mainFrame.setObjectName(u"mainFrame")
         self.mainFrame.setGeometry(QRect(50, 40, 691, 491))
         self.mainFrame.setStyleSheet(u"background-color: #fff;\n"
-                                     "border-radius: 20px;\n"
-                                     "")
+"border-radius: 20px;\n"
+"")
         self.mainFrame.setFrameShape(QFrame.StyledPanel)
         self.mainFrame.setFrameShadow(QFrame.Raised)
         self.robot = QFrame(self.mainFrame)
         self.robot.setObjectName(u"robot")
         self.robot.setGeometry(QRect(290, 20, 391, 451))
         self.robot.setStyleSheet(u"image: url(:/images/Images/robot.png);\n"
-                                 "image: url(:/images/Images/Banner.png);")
+"image: url(:/images/Images/Banner.png);")
         self.robot.setFrameShape(QFrame.StyledPanel)
         self.robot.setFrameShadow(QFrame.Raised)
         self.logo = QFrame(self.mainFrame)
         self.logo.setObjectName(u"logo")
-        self.logo.setGeometry(QRect(20, 20, 171, 71))
+        self.logo.setGeometry(QRect(20, 20, 241, 91))
         self.logo.setStyleSheet(u"image: url(:/images/Images/logoApp.png);")
         self.logo.setFrameShape(QFrame.StyledPanel)
         self.logo.setFrameShadow(QFrame.Raised)
@@ -54,34 +50,47 @@ class Ui_MainWindow(object):
         self.description.setFrameShadow(QFrame.Raised)
         self.initializing = QLabel(self.mainFrame)
         self.initializing.setObjectName(u"initializing")
-        self.initializing.setGeometry(QRect(40, 410, 201, 21))
+        self.initializing.setGeometry(QRect(50, 410, 201, 21))
         font = QFont()
         font.setFamily(u"Futura Md BT")
         font.setPointSize(10)
         self.initializing.setFont(font)
         self.initializing.setStyleSheet(u"background-color:transparent;\n"
-                                        "border: none;")
+"border: none;")
         self.initializing.setAlignment(Qt.AlignCenter)
-        self.loading_press = QLabel(self.mainFrame)
-        self.loading_press.setObjectName(u"loading_press")
-        self.loading_press.setGeometry(QRect(160, 460, 201, 21))
+        self.loadingStatus = QLabel(self.mainFrame)
+        self.loadingStatus.setObjectName(u"loadingStatus")
+        self.loadingStatus.setGeometry(QRect(160, 460, 201, 21))
         font1 = QFont()
         font1.setFamily(u"Futura Md BT")
         font1.setPointSize(7)
-        self.loading_press.setFont(font1)
-        self.loading_press.setStyleSheet(u"background-color:transparent;\n"
-                                         "border: none;")
-        self.loading_press.setAlignment(Qt.AlignCenter)
+        self.loadingStatus.setFont(font1)
+        self.loadingStatus.setStyleSheet(u"background-color:transparent;\n"
+"border: none;")
+        self.loadingStatus.setAlignment(Qt.AlignCenter)
+        self.progressBar = QProgressBar(self.mainFrame)
+        self.progressBar.setObjectName(u"progressBar")
+        self.progressBar.setGeometry(QRect(40, 433, 231, 21))
+        self.progressBar.setStyleSheet(u"QProgressBar{\n"
+"	background-color:transparent;\n"
+"	color:transparent;\n"
+"	text-align:left;\n"
+"}\n"
+"QProgressBar::chunk{\n"
+"	background-color:#f16150;\n"
+"	border-radius:10px;\n"
+"}")
+        self.progressBar.setValue(24)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
 
         QMetaObject.connectSlotsByName(MainWindow)
-
     # setupUi
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.initializing.setText(QCoreApplication.translate("MainWindow", u"Initializing App", None))
-        self.loading_press.setText(QCoreApplication.translate("MainWindow", u"Please Wait ...", None))
+        self.loadingStatus.setText(QCoreApplication.translate("MainWindow", u"Please Wait ...", None))
     # retranslateUi
+

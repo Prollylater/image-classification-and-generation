@@ -4,13 +4,18 @@
 import sys
 import os
 import platform
+
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+#pyside2-uic to change from ui to py
+#pyrcc to change from qrc to py
+
 #Import user interface file
 from ui_splashScreen import *
+progressBarValue = 0
 
 #Main Class
 class MainWindow(QMainWindow):
@@ -34,8 +39,45 @@ class MainWindow(QMainWindow):
         #Apply shadow to central widget
         self.ui.centralwidget.setGraphicsEffect(self.shadow)
 
+        #use QTIMER to delay the progressBar
+
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.appProgress)
+        #Time intervall in milliseconds
+        self.timer.start(100)
+
         #Show window
         self.show()
+
+    #Define appProgress functiion
+    def appProgress(self):
+            global progressBarValue
+            #apply progressbarvalue to proress bar
+            self.ui.progressBar.setValue(progressBarValue)
+
+            #view progress bar value and update status text and close screen and open home window
+            if progressBarValue > 100:
+                #reset timer
+                self.timer.stop()
+
+                #close the splash screen
+                self.close()
+
+                #change the loadingStatus text
+                from _ast import Lambda
+                QtCore.QTimer.singleShot(0,lambda :self.ui.loadingStatus.setText("Loading completed"))
+
+            elif progressBarValue < 40:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Generating App"))
+
+            elif progressBarValue < 70:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Initializing A.I"))
+
+            elif progressBarValue < 90:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Loading content"))
+
+            #increase progressBarValue by 1 after time interval in millisecond;
+            progressBarValue +=1
 
 #executable command
 if __name__ == "__main__":

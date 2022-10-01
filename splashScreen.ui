@@ -59,8 +59,8 @@ image: url(:/images/Images/Banner.png);</string>
       <rect>
        <x>20</x>
        <y>20</y>
-       <width>221</width>
-       <height>81</height>
+       <width>241</width>
+       <height>91</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -95,7 +95,7 @@ image: url(:/images/Images/Banner.png);</string>
     <widget class="QLabel" name="initializing">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>50</x>
        <y>410</y>
        <width>201</width>
        <height>21</height>
@@ -118,7 +118,7 @@ border: none;</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="loading_press">
+    <widget class="QLabel" name="loadingStatus">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -142,6 +142,30 @@ border: none;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>433</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar{
+	background-color:transparent;
+	color:transparent;
+	text-align:left;
+}
+QProgressBar::chunk{
+	background-color:#f16150;
+	border-radius:10px;
+}</string>
+     </property>
+     <property name="value">
+      <number>24</number>
      </property>
     </widget>
    </widget>
