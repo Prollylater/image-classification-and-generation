@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="images">
+    <file>Images/descApp.png</file>
+    <file>Images/logoApp.png</file>
+    <file>Images/Banner.png</file>
+    <file>Images/robot.png</file>
+  </qresource>
+</RCC>
