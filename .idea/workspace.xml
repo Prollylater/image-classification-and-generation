@@ -4,10 +4,9 @@
     <list default="true" id="cb042a80-34a2-4ac0-878d-5dcc592c4dbf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeScreen/homeScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/homeScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeScreen/homeScreen.ui" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/homeScreen.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeScreen/home_screen_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/home_screen_rc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeScreen/ui_homeScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/ui_homeScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoadingScreen/loadingScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/LoadingScreen/loadingScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +36,40 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/rahmonex/Documents/git/image-classification-and-generation",
+    "last_opened_file_path": "/home/rahmonex/Documents/git/image-classification-and-generation/ClassifyCategoriesScreen",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ClassifyCategoriesScreen" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/LoadingScreen" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.loadingScreen">
+  <component name="RunManager" selected="Python.classifyCategoriesScreen">
+    <configuration name="classifyCategoriesScreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="image-classification-and-generation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ClassifyCategoriesScreen" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ClassifyCategoriesScreen/classifyCategoriesScreen.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="homeScreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="image-classification-and-generation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,6 +135,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.classifyCategoriesScreen" />
         <item itemvalue="Python.loadingScreen" />
         <item itemvalue="Python.homeScreen" />
         <item itemvalue="Python.main" />

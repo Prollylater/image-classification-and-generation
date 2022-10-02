@@ -49,15 +49,15 @@ border-radius: 25px;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-	background-color:#f16150;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
 }
 QPushButton:hover{
-	background-color: rgb(185, 74, 61);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
-	font-size : 20px;
+	font-size : 25px;
 }
 </string>
        </property>
@@ -204,16 +204,17 @@ background-color:transparent;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-	background-color:#f16150;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
 }
 QPushButton:hover{
-	background-color: rgb(185, 74, 61);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
-	font-size : 20px;
-}</string>
+	font-size : 25px;
+}
+</string>
        </property>
        <property name="text">
         <string>Generate</string>

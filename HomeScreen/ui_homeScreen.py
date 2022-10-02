@@ -38,15 +38,15 @@ class Ui_MainWindow(object):
         self.classifyButton.setFont(font)
         self.classifyButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.classifyButton.setStyleSheet(u"QPushButton{\n"
-"	background-color:#f16150;\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(185, 74, 61);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
-"	font-size : 20px;\n"
+"	font-size : 25px;\n"
 "}\n"
 "")
         self.circle1 = QFrame(self.MainFrame)
@@ -95,16 +95,17 @@ class Ui_MainWindow(object):
         self.generateButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.generateButton.setLayoutDirection(Qt.LeftToRight)
         self.generateButton.setStyleSheet(u"QPushButton{\n"
-"	background-color:#f16150;\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(185, 74, 61);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
-"	font-size : 20px;\n"
-"}")
+"	font-size : 25px;\n"
+"}\n"
+"")
         self.windowNav = QFrame(self.MainFrame)
         self.windowNav.setObjectName(u"windowNav")
         self.windowNav.setGeometry(QRect(1000, 10, 100, 40))
