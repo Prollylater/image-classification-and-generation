@@ -2,15 +2,10 @@
 
 #APP Imports
 import sys
-import os
-import platform
 
-from PyQt5.QtWidgets import QDesktopWidget
+from HomeScreen.homeScreen import HomeScreenWindow
+
 from PySide2 import QtCore, QtGui, QtWidgets
-from PySide2.QtCore import *
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import *
-import HomeScreen.homeScreen
 
 #pyside2-uic to change from ui to py
 #pyrcc to change from qrc to py
@@ -57,6 +52,8 @@ class LoadingScreenWindow(QMainWindow):
         #Show window
         self.show()
 
+
+
     #Function to center the Main Widget
     def center(self):
         # center window
@@ -81,6 +78,10 @@ class LoadingScreenWindow(QMainWindow):
             if progressBarValue > 100:
                 #reset timer
                 self.timer.stop()
+
+                #Open Home Screen Window after progress bar finnished
+                self.main = HomeScreenWindow()
+                self.main.show()
 
                 #close the splash screen
                 self.close()

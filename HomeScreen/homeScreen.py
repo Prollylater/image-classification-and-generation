@@ -2,32 +2,30 @@
 
 #APP Imports
 import sys
-import os
-import platform
+
 
 from PySide2 import QtCore, QtGui, QtWidgets
-from PySide2.QtCore import *
-from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 #pyside2-uic to change from ui to py
 #pyrcc to change from qrc to py
 
 #Import user interface file
-from ui_homeScreen import *
+from HomeScreen import ui_homeScreen
+
 
 #Main Class
 class HomeScreenWindow(QMainWindow):
     def __init__(self):
-        QMainWindow.__init__(self)
-        self.ui = Ui_MainWindow()
+        ui_homeScreen.QMainWindow.__init__(self)
+        self.ui = ui_homeScreen.Ui_MainWindow()
         self.ui.setupUi(self)
         self.center()
 
-        #Remove window title bar
+        # Remove window title bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
 
-        #Set main background to transparent
+        # Set main background to transparent
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
         # Set Window Icon
@@ -36,11 +34,11 @@ class HomeScreenWindow(QMainWindow):
         self.setWindowTitle("CGI App")
 
         #Apply shadow effect
-        self.shadow = QGraphicsDropShadowEffect(self)
+        self.shadow = ui_homeScreen.QGraphicsDropShadowEffect(self)
         self.shadow.setBlurRadius(20)
         self.shadow.setXOffset(0)
         self.shadow.setYOffset(0)
-        self.shadow.setColor(QColor(0,0,0,120))
+        self.shadow.setColor(ui_homeScreen.QColor(0, 0, 0, 120))
         #Apply shadow to central widget
         self.ui.centralwidget.setGraphicsEffect(self.shadow)
 
@@ -53,7 +51,7 @@ class HomeScreenWindow(QMainWindow):
         #Move window on mouse drag event on the title bar
         def moveWindow(e):
             #only accept when left button is clicked
-            if e.buttons() == Qt.LeftButton:
+            if e.buttons() == ui_homeScreen.Qt.LeftButton:
                 self.move(self.pos() + e.globalPos() - self.clickPosition)
                 self.clickPosition = e.globalPos()
                 e.accept()
@@ -65,6 +63,7 @@ class HomeScreenWindow(QMainWindow):
 
         #Show window
         self.show()
+
 
     #Center the Window
     def center(self):
@@ -85,8 +84,9 @@ class HomeScreenWindow(QMainWindow):
         self.clickPosition = event.globalPos()
 
 
+
 #executable command
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = ui_homeScreen.QApplication(sys.argv)
     window = HomeScreenWindow()
     sys.exit(app.exec_())

@@ -12,7 +12,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-import home_screen_rc
+from HomeScreen import home_screen_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
