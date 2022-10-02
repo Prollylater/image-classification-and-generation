@@ -14,12 +14,12 @@ from PySide2.QtWidgets import *
 
 import splash_screen_rc
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
-        self.centralwidget = QWidget(MainWindow)
+class Ui_SplashScreen(object):
+    def setupUi(self, SplashScreen):
+        if not SplashScreen.objectName():
+            SplashScreen.setObjectName(u"SplashScreen")
+        SplashScreen.resize(800, 600)
+        self.centralwidget = QWidget(SplashScreen)
         self.centralwidget.setObjectName(u"centralwidget")
         self.mainFrame = QFrame(self.centralwidget)
         self.mainFrame.setObjectName(u"mainFrame")
@@ -81,16 +81,16 @@ class Ui_MainWindow(object):
 "	border-radius:10px;\n"
 "}")
         self.progressBar.setValue(24)
-        MainWindow.setCentralWidget(self.centralwidget)
+        SplashScreen.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(SplashScreen)
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(SplashScreen)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.initializing.setText(QCoreApplication.translate("MainWindow", u"Initializing App", None))
-        self.loadingStatus.setText(QCoreApplication.translate("MainWindow", u"Please Wait ...", None))
+    def retranslateUi(self, SplashScreen):
+        SplashScreen.setWindowTitle(QCoreApplication.translate("SplashScreen", u"MainWindow", None))
+        self.initializing.setText(QCoreApplication.translate("SplashScreen", u"Initializing App", None))
+        self.loadingStatus.setText(QCoreApplication.translate("SplashScreen", u"Please Wait ...", None))
     # retranslateUi
 

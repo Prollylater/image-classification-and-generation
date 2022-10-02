@@ -5,12 +5,12 @@ import sys
 import os
 import platform
 
-from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QDesktopWidget
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import *
-from PySide2.QtGui import *
+from PySide2.QtGui import QIcon
 from PySide2.QtWidgets import *
+import HomeScreen.homeScreen
 
 #pyside2-uic to change from ui to py
 #pyrcc to change from qrc to py
@@ -19,16 +19,19 @@ from PySide2.QtWidgets import *
 from ui_splashScreen import *
 progressBarValue = 0
 
-#Main Class
-class MainWindow(QMainWindow):
+
+#Loading Screen Class
+class LoadingScreenWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_SplashScreen()
         self.ui.setupUi(self)
         #center the window
         self.center()
-
-
+        #Set Window Icon
+        self.setWindowIcon(QtGui.QIcon(":/Images/Images/logoDeskApp.png"))
+        #Set Window title
+        self.setWindowTitle("CGI App")
         #Remove window title bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
 
@@ -107,5 +110,5 @@ class MainWindow(QMainWindow):
 #executable command
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = LoadingScreenWindow()
     sys.exit(app.exec_())

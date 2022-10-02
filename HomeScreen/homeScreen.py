@@ -17,7 +17,7 @@ from PySide2.QtWidgets import *
 from ui_homeScreen import *
 
 #Main Class
-class MainWindow(QMainWindow):
+class HomeScreenWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
@@ -29,6 +29,11 @@ class MainWindow(QMainWindow):
 
         #Set main background to transparent
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+        # Set Window Icon
+        self.setWindowIcon(QtGui.QIcon(":/Images/Images/logoDeskApp.png"))
+        # Set Window title
+        self.setWindowTitle("CGI App")
 
         #Apply shadow effect
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -83,5 +88,5 @@ class MainWindow(QMainWindow):
 #executable command
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = HomeScreenWindow()
     sys.exit(app.exec_())
