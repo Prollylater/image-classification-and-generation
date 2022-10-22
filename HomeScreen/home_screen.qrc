@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="Images">
+    <file>../Images/photo.png</file>
     <file>../Images/Classify Icons/MusicInstruments.png</file>
     <file>../Images/close.png</file>
     <file>../Images/Classify Icons/Animals.png</file>
