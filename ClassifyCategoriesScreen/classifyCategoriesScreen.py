@@ -1,14 +1,19 @@
-#Classify and Generate Image Loading screen
+#Classify and Generate Image Classify Categories screen
 
 #APP Imports
 import sys
 
+from HomeScreen.homeScreen import HomeScreenWindow
 
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtWidgets import *
 
+#pyside2-uic to change from ui to py
+#pyrcc to change from qrc to py
+
 #Import user interface file
 from ClassifyCategoriesScreen import ui_classifyCategoriesScreen
+
 
 #Main Class
 class ClassifyCategoriesScreenWindow(QMainWindow):
@@ -43,6 +48,9 @@ class ClassifyCategoriesScreenWindow(QMainWindow):
         self.ui.minimizeButton.clicked.connect(lambda: self.showMinimized())
         #Close Window
         self.ui.closeButton.clicked.connect(lambda: self.close())
+        #Go Back Button
+        self.ui.GoBack.clicked.connect(self.openHomeWindow)
+
 
         #Move window on mouse drag event on the title bar
         def moveWindow(e):
@@ -73,6 +81,12 @@ class ClassifyCategoriesScreenWindow(QMainWindow):
                 QtGui.QGuiApplication.primaryScreen().availableGeometry(),
             ),
         )
+
+    # Open Home Window
+    def openHomeWindow(self):
+        self.window = HomeScreenWindow()
+        ClassifyCategoriesScreenWindow.close(self)
+        self.window.show()
 
     # Mouse events to the window
     def mousePressEvent(self, event):

@@ -50,6 +50,9 @@ border-radius: 25px;</string>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
 	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);
@@ -65,7 +68,20 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Animals</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../HomeScreen/home_screen.qrc">
+       <normaloff>:/Images/Images/Classify Icons/Animals.png</normaloff>:/Images/Images/Classify Icons/Animals.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QFrame" name="circle1">
@@ -353,7 +369,17 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Plants</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../HomeScreen/home_screen.qrc">
+       <normaloff>:/Images/Images/Classify Icons/Plants.png</normaloff>:/Images/Images/Classify Icons/Plants.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="VehicleButton">
@@ -388,7 +414,17 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Vehicles</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../HomeScreen/home_screen.qrc">
+       <normaloff>:/Images/Images/Classify Icons/vehicles.png</normaloff>:/Images/Images/Classify Icons/vehicles.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="LogosButton">
@@ -423,7 +459,17 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Logos</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../HomeScreen/home_screen.qrc">
+       <normaloff>:/Images/Images/Classify Icons/Logos.png</normaloff>:/Images/Images/Classify Icons/Logos.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="ArtistsButton">
@@ -458,7 +504,17 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Artists</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../HomeScreen/home_screen.qrc">
+       <normaloff>:/Images/Images/Classify Icons/Artists.png</normaloff>:/Images/Images/Classify Icons/Artists.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="AthletesButton">
@@ -493,7 +549,17 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Athletes</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../HomeScreen/home_screen.qrc">
+       <normaloff>:/Images/Images/Classify Icons/Athletes.png</normaloff>:/Images/Images/Classify Icons/Athletes.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="MIButton">
@@ -528,7 +594,17 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Music Instruments</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../HomeScreen/home_screen.qrc">
+       <normaloff>:/Images/Images/Classify Icons/MusicInstruments.png</normaloff>:/Images/Images/Classify Icons/MusicInstruments.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="DishesButton">
@@ -563,7 +639,17 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Dishes</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../HomeScreen/home_screen.qrc">
+       <normaloff>:/Images/Images/Classify Icons/Dishes.png</normaloff>:/Images/Images/Classify Icons/Dishes.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="ClothesButton">
@@ -598,7 +684,17 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Clothes</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../HomeScreen/home_screen.qrc">
+       <normaloff>:/Images/Images/Classify Icons/Clothes.png</normaloff>:/Images/Images/Classify Icons/Clothes.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
      </property>
     </widget>
     <zorder>logo</zorder>

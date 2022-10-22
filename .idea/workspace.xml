@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cb042a80-34a2-4ac0-878d-5dcc592c4dbf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/homeScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/homeScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/homeScreen.ui" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/homeScreen.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/home_screen_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/home_screen_rc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/ui_homeScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/ui_homeScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassifyCategoriesScreen/classifyCategoriesScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassifyCategoriesScreen/classifyCategoriesScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassifyCategoriesScreen/classifyCategoriesScreen.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ClassifyCategoriesScreen/classifyCategoriesScreen.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassifyCategoriesScreen/ui_classifyCategoriesScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassifyCategoriesScreen/ui_classifyCategoriesScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +33,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/rahmonex/Documents/git/image-classification-and-generation/ClassifyCategoriesScreen",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+    "last_opened_file_path": "/home/rahmonex/Documents/Git/image-classification-and-generation",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -48,7 +48,7 @@
       <recent name="$PROJECT_DIR$/LoadingScreen" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.classifyCategoriesScreen">
+  <component name="RunManager" selected="Python.homeScreen">
     <configuration name="classifyCategoriesScreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="image-classification-and-generation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,9 +135,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.homeScreen" />
         <item itemvalue="Python.classifyCategoriesScreen" />
         <item itemvalue="Python.loadingScreen" />
-        <item itemvalue="Python.homeScreen" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>

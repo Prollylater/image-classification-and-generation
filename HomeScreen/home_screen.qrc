@@ -1,6 +1,15 @@
 <RCC>
   <qresource prefix="Images">
+    <file>../Images/Classify Icons/MusicInstruments.png</file>
     <file>../Images/close.png</file>
+    <file>../Images/Classify Icons/Animals.png</file>
+    <file>../Images/Classify Icons/Artists.png</file>
+    <file>../Images/Classify Icons/Athletes.png</file>
+    <file>../Images/Classify Icons/Clothes.png</file>
+    <file>../Images/Classify Icons/Dishes.png</file>
+    <file>../Images/Classify Icons/Logos.png</file>
+    <file>../Images/Classify Icons/Plants.png</file>
+    <file>../Images/Classify Icons/vehicles.png</file>
     <file>../Images/circle1.png</file>
     <file>../Images/circle2.png</file>
     <file>../Images/minimize.png</file>

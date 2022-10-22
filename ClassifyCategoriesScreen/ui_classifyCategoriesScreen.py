@@ -35,6 +35,7 @@ class Ui_ClassifyCategoriesWindow(object):
         font.setPointSize(17)
         self.AnimalsButton.setFont(font)
         self.AnimalsButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.AnimalsButton.setContextMenuPolicy(Qt.NoContextMenu)
         self.AnimalsButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
@@ -47,6 +48,11 @@ class Ui_ClassifyCategoriesWindow(object):
 "	font-size : 25px;\n"
 "}\n"
 "")
+        icon = QIcon()
+        icon.addFile(u":/Images/Images/Classify Icons/Animals.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.AnimalsButton.setIcon(icon)
+        self.AnimalsButton.setIconSize(QSize(150, 150))
+        self.AnimalsButton.setAutoDefault(False)
         self.circle1 = QFrame(self.MainFrame)
         self.circle1.setObjectName(u"circle1")
         self.circle1.setGeometry(QRect(20, 430, 351, 261))
@@ -103,9 +109,9 @@ class Ui_ClassifyCategoriesWindow(object):
         self.minimizeButton.setObjectName(u"minimizeButton")
         self.minimizeButton.setMaximumSize(QSize(30, 30))
         self.minimizeButton.setCursor(QCursor(Qt.PointingHandCursor))
-        icon = QIcon()
-        icon.addFile(u":/Images/Images/minimize.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.minimizeButton.setIcon(icon)
+        icon1 = QIcon()
+        icon1.addFile(u":/Images/Images/minimize.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.minimizeButton.setIcon(icon1)
         self.minimizeButton.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_2.addWidget(self.minimizeButton)
@@ -114,9 +120,9 @@ class Ui_ClassifyCategoriesWindow(object):
         self.closeButton.setObjectName(u"closeButton")
         self.closeButton.setMaximumSize(QSize(50, 50))
         self.closeButton.setCursor(QCursor(Qt.PointingHandCursor))
-        icon1 = QIcon()
-        icon1.addFile(u":/Images/Images/close.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.closeButton.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/Images/Images/close.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.closeButton.setIcon(icon2)
         self.closeButton.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_2.addWidget(self.closeButton)
@@ -151,6 +157,10 @@ class Ui_ClassifyCategoriesWindow(object):
 "	font-size : 25px;\n"
 "}\n"
 "")
+        icon3 = QIcon()
+        icon3.addFile(u":/Images/Images/Classify Icons/Plants.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.PlantsButton.setIcon(icon3)
+        self.PlantsButton.setIconSize(QSize(150, 150))
         self.VehicleButton = QPushButton(self.MainFrame)
         self.VehicleButton.setObjectName(u"VehicleButton")
         self.VehicleButton.setGeometry(QRect(700, 110, 221, 161))
@@ -168,6 +178,10 @@ class Ui_ClassifyCategoriesWindow(object):
 "	font-size : 25px;\n"
 "}\n"
 "")
+        icon4 = QIcon()
+        icon4.addFile(u":/Images/Images/Classify Icons/vehicles.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.VehicleButton.setIcon(icon4)
+        self.VehicleButton.setIconSize(QSize(150, 150))
         self.LogosButton = QPushButton(self.MainFrame)
         self.LogosButton.setObjectName(u"LogosButton")
         self.LogosButton.setGeometry(QRect(700, 310, 221, 161))
@@ -185,6 +199,10 @@ class Ui_ClassifyCategoriesWindow(object):
 "	font-size : 25px;\n"
 "}\n"
 "")
+        icon5 = QIcon()
+        icon5.addFile(u":/Images/Images/Classify Icons/Logos.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.LogosButton.setIcon(icon5)
+        self.LogosButton.setIconSize(QSize(150, 150))
         self.ArtistsButton = QPushButton(self.MainFrame)
         self.ArtistsButton.setObjectName(u"ArtistsButton")
         self.ArtistsButton.setGeometry(QRect(180, 310, 221, 161))
@@ -202,6 +220,10 @@ class Ui_ClassifyCategoriesWindow(object):
 "	font-size : 25px;\n"
 "}\n"
 "")
+        icon6 = QIcon()
+        icon6.addFile(u":/Images/Images/Classify Icons/Artists.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.ArtistsButton.setIcon(icon6)
+        self.ArtistsButton.setIconSize(QSize(150, 150))
         self.AthletesButton = QPushButton(self.MainFrame)
         self.AthletesButton.setObjectName(u"AthletesButton")
         self.AthletesButton.setGeometry(QRect(440, 310, 221, 161))
@@ -219,6 +241,10 @@ class Ui_ClassifyCategoriesWindow(object):
 "	font-size : 25px;\n"
 "}\n"
 "")
+        icon7 = QIcon()
+        icon7.addFile(u":/Images/Images/Classify Icons/Athletes.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.AthletesButton.setIcon(icon7)
+        self.AthletesButton.setIconSize(QSize(150, 150))
         self.MIButton = QPushButton(self.MainFrame)
         self.MIButton.setObjectName(u"MIButton")
         self.MIButton.setGeometry(QRect(180, 510, 221, 161))
@@ -236,6 +262,10 @@ class Ui_ClassifyCategoriesWindow(object):
 "	font-size : 25px;\n"
 "}\n"
 "")
+        icon8 = QIcon()
+        icon8.addFile(u":/Images/Images/Classify Icons/MusicInstruments.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.MIButton.setIcon(icon8)
+        self.MIButton.setIconSize(QSize(150, 150))
         self.DishesButton = QPushButton(self.MainFrame)
         self.DishesButton.setObjectName(u"DishesButton")
         self.DishesButton.setGeometry(QRect(700, 510, 221, 161))
@@ -253,6 +283,10 @@ class Ui_ClassifyCategoriesWindow(object):
 "	font-size : 25px;\n"
 "}\n"
 "")
+        icon9 = QIcon()
+        icon9.addFile(u":/Images/Images/Classify Icons/Dishes.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.DishesButton.setIcon(icon9)
+        self.DishesButton.setIconSize(QSize(150, 150))
         self.ClothesButton = QPushButton(self.MainFrame)
         self.ClothesButton.setObjectName(u"ClothesButton")
         self.ClothesButton.setGeometry(QRect(440, 510, 221, 161))
@@ -270,6 +304,10 @@ class Ui_ClassifyCategoriesWindow(object):
 "	font-size : 25px;\n"
 "}\n"
 "")
+        icon10 = QIcon()
+        icon10.addFile(u":/Images/Images/Classify Icons/Clothes.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.ClothesButton.setIcon(icon10)
+        self.ClothesButton.setIconSize(QSize(150, 150))
         self.logo.raise_()
         self.circle1.raise_()
         self.circle2.raise_()
@@ -296,17 +334,17 @@ class Ui_ClassifyCategoriesWindow(object):
 
     def retranslateUi(self, ClassifyCategoriesWindow):
         ClassifyCategoriesWindow.setWindowTitle(QCoreApplication.translate("ClassifyCategoriesWindow", u"MainWindow", None))
-        self.AnimalsButton.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Animals", None))
+        self.AnimalsButton.setText("")
         self.GoBack.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Go Back", None))
         self.minimizeButton.setText("")
         self.closeButton.setText("")
-        self.PlantsButton.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Plants", None))
-        self.VehicleButton.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Vehicles", None))
-        self.LogosButton.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Logos", None))
-        self.ArtistsButton.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Artists", None))
-        self.AthletesButton.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Athletes", None))
-        self.MIButton.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Music Instruments", None))
-        self.DishesButton.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Dishes", None))
-        self.ClothesButton.setText(QCoreApplication.translate("ClassifyCategoriesWindow", u"Clothes", None))
+        self.PlantsButton.setText("")
+        self.VehicleButton.setText("")
+        self.LogosButton.setText("")
+        self.ArtistsButton.setText("")
+        self.AthletesButton.setText("")
+        self.MIButton.setText("")
+        self.DishesButton.setText("")
+        self.ClothesButton.setText("")
     # retranslateUi
 
