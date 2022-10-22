@@ -3,10 +3,9 @@
 #APP Imports
 import sys
 
-from ClassifyCategoriesScreen.classifyCategoriesScreen import ClassifyCategoriesScreenWindow
-
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtWidgets import *
+from PyQt5 import Qt
 
 #pyside2-uic to change from ui to py
 #pyrcc to change from qrc to py
@@ -50,6 +49,9 @@ class AnimalsScreenWindow(QMainWindow):
         self.ui.closeButton.clicked.connect(lambda: self.close())
         #Go Back Button
         self.ui.GoBack.clicked.connect(self.openClassifyCategoriesWindow)
+        #Upload Button
+        self.ui.uploadButton.clicked.connect(self.uploadImage)
+
 
 
         #Move window on mouse drag event on the title bar
@@ -89,6 +91,14 @@ class AnimalsScreenWindow(QMainWindow):
         ClassifyCategoriesScreenWindow.close(self)
         self.window.show()
 
+    #Upload Images to the frame
+    def uploadImage(self):
+        fname = QFileDialog.getOpenFileName(self,"Upload the animal Picture","","Images (*.jpg *.png)")
+        #Open the Image
+        self.pixmap =QtGui.QPixmap(fname[0])
+        #Add the image to the frame
+        self.label =self.findChild(QLabel,"label")
+        self.label.setPixmap(self.pixmap)
     # Mouse events to the window
     def mousePressEvent(self, event):
         # get current position of the mouse

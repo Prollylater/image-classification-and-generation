@@ -118,9 +118,14 @@ class Ui_AnimalsWindow(object):
         self.label = QLabel(self.MainFrame)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(100, 120, 371, 361))
+        self.label.setLayoutDirection(Qt.LeftToRight)
+        self.label.setAutoFillBackground(False)
         self.label.setStyleSheet(u"background-color: rgb(12, 22, 33);\n"
-"image: url(:/Images/Images/robot.png);\n"
 "border-radius : 20px;")
+        self.label.setPixmap(QPixmap(u":/Images/Images/robot.png"))
+        self.label.setScaledContents(True)
+        self.label.setAlignment(Qt.AlignHCenter|Qt.AlignVCenter)
+        self.label.setWordWrap(True)
         self.classifyingLabel = QLabel(self.MainFrame)
         self.classifyingLabel.setObjectName(u"classifyingLabel")
         self.classifyingLabel.setGeometry(QRect(180, 560, 201, 21))
