@@ -101,40 +101,40 @@ class AnimalsScreenWindow(QMainWindow):
         self.clickPosition = event.globalPos()
 
     def classifyProgress(self):
-            global progressBarValue
+        global progressBarValue
 
-            #apply progressbarvalue to proress bar
-            self.ui.progressBar.setValue(progressBarValue)
+        #apply progressbarvalue to proress bar
+        self.ui.progressBar.setValue(progressBarValue)
 
-            #view progress bar value and update status text and close screen and open home window
-            if progressBarValue > 100:
-                #reset timer
-                self.timer.stop()
-                progressBarValue = 0
-                #change the Status text
-                from _ast import Lambda
-                QtCore.QTimer.singleShot(0,lambda :self.ui.loadingStatus.setText("Loading completed"))
+        #view progress bar value and update status text and close screen and open home window
+        if progressBarValue > 100:
+            #reset timer
+            self.timer.stop()
+            progressBarValue = 0
+            #change the Status text
+            from _ast import Lambda
+            QtCore.QTimer.singleShot(0,lambda :self.ui.loadingStatus.setText("Loading completed"))
 
-            elif progressBarValue < 2:
-                QtCore.QTimer.singleShot(0, lambda: self.ui.classifyingLabel.setText("Classifying Image"))
+        elif progressBarValue < 2:
+            QtCore.QTimer.singleShot(0, lambda: self.ui.classifyingLabel.setText("Classifying Image"))
 
-            elif progressBarValue < 20:
-                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Please Wait"))
+        elif progressBarValue < 20:
+            QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Please Wait"))
 
-            elif progressBarValue < 40:
-                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Collecting Data"))
+        elif progressBarValue < 40:
+            QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Collecting Data"))
 
-            elif progressBarValue < 60:
-                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Comparing Image"))
+        elif progressBarValue < 60:
+            QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Comparing Image"))
 
-            elif progressBarValue < 80:
-                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Analyzing"))
+        elif progressBarValue < 80:
+            QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Analyzing"))
 
-            elif progressBarValue < 100:
-                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Loading results"))
+        elif progressBarValue < 100:
+            QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Loading results"))
 
-            #increase progressBarValue by 1 after time interval in millisecond;
-            progressBarValue +=1
+        #increase progressBarValue by 1 after time interval in millisecond;
+        progressBarValue +=1
 
 
     def openTimer(self):
