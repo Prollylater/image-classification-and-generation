@@ -49,10 +49,12 @@ class AnimalsScreenWindow(QMainWindow):
         self.ui.closeButton.clicked.connect(lambda: self.close())
         #Go Back Button
         self.ui.GoBack.clicked.connect(self.openClassifyCategoriesWindow)
+        #Upload Button
+        self.ui.uploadButton.clicked.connect(self.resetTimerAndUploadImage)
+
         #Classify Button
         self.ui.classifyButton.clicked.connect(self.openTimer)
-        # Upload Button
-        self.ui.uploadButton.clicked.connect(self.resetTimerAndUploadImage)
+
 
 
         #Move window on mouse drag event on the title bar
@@ -108,11 +110,12 @@ class AnimalsScreenWindow(QMainWindow):
             if progressBarValue > 100:
                 #reset timer
                 self.timer.stop()
+                progressBarValue = 0
                 #change the Status text
                 from _ast import Lambda
                 QtCore.QTimer.singleShot(0,lambda :self.ui.loadingStatus.setText("Loading completed"))
 
-            elif progressBarValue < 1:
+            elif progressBarValue < 2:
                 QtCore.QTimer.singleShot(0, lambda: self.ui.classifyingLabel.setText("Classifying Image"))
 
             elif progressBarValue < 20:
@@ -137,12 +140,15 @@ class AnimalsScreenWindow(QMainWindow):
     def openTimer(self):
         self.timer = QtCore.QTimer()
         # Time intervall in milliseconds
-        self.timer.start(100)
+        self.timer.start(50)
+        progressBarValue = 0
+        self.ui.progressBar.setValue(progressBarValue)
         self.timer.timeout.connect(self.classifyProgress)
 
     def resetTimerAndUploadImage(self):
         #Reset Timer
         progressBarValue = 0
+        # apply progressbarvalue to proress bar
         self.ui.progressBar.setValue(progressBarValue)
         QtCore.QTimer.singleShot(0, lambda: self.ui.classifyingLabel.setText(""))
         QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText(""))

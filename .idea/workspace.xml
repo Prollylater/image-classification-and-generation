@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb042a80-34a2-4ac0-878d-5dcc592c4dbf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classify/animalsScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/animalsScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classify/classifyScreen.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/classifyScreen.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classify/ui_classifyScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/ui_classifyScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +24,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2FRI27NVB1kMDc2LWzwImoCs0wt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
