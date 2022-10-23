@@ -12,7 +12,7 @@ from PyQt5 import Qt
 
 #Import user interface file
 from Classify import ui_classifyScreen
-
+progressBarValue = 0
 
 #Main Class
 class AnimalsScreenWindow(QMainWindow):
@@ -49,9 +49,10 @@ class AnimalsScreenWindow(QMainWindow):
         self.ui.closeButton.clicked.connect(lambda: self.close())
         #Go Back Button
         self.ui.GoBack.clicked.connect(self.openClassifyCategoriesWindow)
-        #Upload Button
-        self.ui.uploadButton.clicked.connect(self.uploadImage)
-
+        #Classify Button
+        self.ui.classifyButton.clicked.connect(self.openTimer)
+        # Upload Button
+        self.ui.uploadButton.clicked.connect(self.resetTimerAndUploadImage)
 
 
         #Move window on mouse drag event on the title bar
@@ -91,19 +92,67 @@ class AnimalsScreenWindow(QMainWindow):
         ClassifyCategoriesScreenWindow.close(self)
         self.window.show()
 
-    #Upload Images to the frame
-    def uploadImage(self):
-        fname = QFileDialog.getOpenFileName(self,"Upload the animal Picture","","Images (*.jpg *.png)")
-        #Open the Image
-        self.pixmap =QtGui.QPixmap(fname[0])
-        #Add the image to the frame
-        self.label =self.findChild(QLabel,"label")
-        self.label.setPixmap(self.pixmap)
+
     # Mouse events to the window
     def mousePressEvent(self, event):
         # get current position of the mouse
         self.clickPosition = event.globalPos()
 
+    def classifyProgress(self):
+            global progressBarValue
+
+            #apply progressbarvalue to proress bar
+            self.ui.progressBar.setValue(progressBarValue)
+
+            #view progress bar value and update status text and close screen and open home window
+            if progressBarValue > 100:
+                #reset timer
+                self.timer.stop()
+                #change the Status text
+                from _ast import Lambda
+                QtCore.QTimer.singleShot(0,lambda :self.ui.loadingStatus.setText("Loading completed"))
+
+            elif progressBarValue < 1:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.classifyingLabel.setText("Classifying Image"))
+
+            elif progressBarValue < 20:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Please Wait"))
+
+            elif progressBarValue < 40:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Collecting Data"))
+
+            elif progressBarValue < 60:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Comparing Image"))
+
+            elif progressBarValue < 80:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Analyzing"))
+
+            elif progressBarValue < 100:
+                QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Loading results"))
+
+            #increase progressBarValue by 1 after time interval in millisecond;
+            progressBarValue +=1
+
+
+    def openTimer(self):
+        self.timer = QtCore.QTimer()
+        # Time intervall in milliseconds
+        self.timer.start(100)
+        self.timer.timeout.connect(self.classifyProgress)
+
+    def resetTimerAndUploadImage(self):
+        #Reset Timer
+        progressBarValue = 0
+        self.ui.progressBar.setValue(progressBarValue)
+        QtCore.QTimer.singleShot(0, lambda: self.ui.classifyingLabel.setText(""))
+        QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText(""))
+        #Uplaod Image to frame
+        fname = QFileDialog.getOpenFileName(self, "Upload the animal Picture", "", "Images (*.jpg *.png)")
+        # Open the Image
+        self.pixmap = QtGui.QPixmap(fname[0])
+        # Add the image to the frame
+        self.label = self.findChild(QLabel, "label")
+        self.label.setPixmap(self.pixmap)
 
 
 #executable command

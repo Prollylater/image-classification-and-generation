@@ -36,8 +36,8 @@ border-radius: 25px;</string>
     <widget class="QFrame" name="circle1">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>430</y>
+       <x>-90</x>
+       <y>330</y>
        <width>351</width>
        <height>261</height>
       </rect>
@@ -342,7 +342,7 @@ color: rgb(255, 255, 255);
 border: none;</string>
      </property>
      <property name="text">
-      <string>Classifying Image</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -369,7 +369,7 @@ QProgressBar::chunk{
 }</string>
      </property>
      <property name="value">
-      <number>24</number>
+      <number>0</number>
      </property>
     </widget>
     <widget class="QLabel" name="loadingStatus">
@@ -393,7 +393,7 @@ color: rgb(255, 255, 255);
 border: none;</string>
      </property>
      <property name="text">
-      <string>Please Wait ...</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -435,7 +435,7 @@ QPushButton:hover{
       <string>Upload Image</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="uploadButton_2">
+    <widget class="QPushButton" name="classifyButton">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -484,7 +484,7 @@ QPushButton:hover{
     <zorder>progressBar</zorder>
     <zorder>loadingStatus</zorder>
     <zorder>uploadButton</zorder>
-    <zorder>uploadButton_2</zorder>
+    <zorder>classifyButton</zorder>
    </widget>
   </widget>
  </widget>

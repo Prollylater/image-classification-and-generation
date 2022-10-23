@@ -30,7 +30,7 @@ class Ui_AnimalsWindow(object):
         self.MainFrame.setFrameShadow(QFrame.Raised)
         self.circle1 = QFrame(self.MainFrame)
         self.circle1.setObjectName(u"circle1")
-        self.circle1.setGeometry(QRect(20, 430, 351, 261))
+        self.circle1.setGeometry(QRect(-90, 330, 351, 261))
         self.circle1.setStyleSheet(u"image: url(:/Images/Images/circle1.png);")
         self.circle1.setFrameShape(QFrame.StyledPanel)
         self.circle1.setFrameShadow(QFrame.Raised)
@@ -124,7 +124,7 @@ class Ui_AnimalsWindow(object):
 "border-radius : 20px;")
         self.label.setPixmap(QPixmap(u":/Images/Images/robot.png"))
         self.label.setScaledContents(True)
-        self.label.setAlignment(Qt.AlignHCenter|Qt.AlignVCenter)
+        self.label.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
         self.label.setWordWrap(True)
         self.classifyingLabel = QLabel(self.MainFrame)
         self.classifyingLabel.setObjectName(u"classifyingLabel")
@@ -149,7 +149,7 @@ class Ui_AnimalsWindow(object):
 "	background-color:#f16150;\n"
 "	border-radius:10px;\n"
 "}")
-        self.progressBar.setValue(24)
+        self.progressBar.setValue(0)
         self.loadingStatus = QLabel(self.MainFrame)
         self.loadingStatus.setObjectName(u"loadingStatus")
         self.loadingStatus.setGeometry(QRect(290, 627, 201, 21))
@@ -180,12 +180,12 @@ class Ui_AnimalsWindow(object):
 "	font-size : 17px;\n"
 "}\n"
 "")
-        self.uploadButton_2 = QPushButton(self.MainFrame)
-        self.uploadButton_2.setObjectName(u"uploadButton_2")
-        self.uploadButton_2.setGeometry(QRect(310, 500, 141, 41))
-        self.uploadButton_2.setFont(font2)
-        self.uploadButton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.uploadButton_2.setStyleSheet(u"QPushButton{\n"
+        self.classifyButton = QPushButton(self.MainFrame)
+        self.classifyButton.setObjectName(u"classifyButton")
+        self.classifyButton.setGeometry(QRect(310, 500, 141, 41))
+        self.classifyButton.setFont(font2)
+        self.classifyButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.classifyButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
@@ -211,7 +211,7 @@ class Ui_AnimalsWindow(object):
         self.progressBar.raise_()
         self.loadingStatus.raise_()
         self.uploadButton.raise_()
-        self.uploadButton_2.raise_()
+        self.classifyButton.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -225,9 +225,9 @@ class Ui_AnimalsWindow(object):
         self.minimizeButton.setText("")
         self.closeButton.setText("")
         self.label.setText("")
-        self.classifyingLabel.setText(QCoreApplication.translate("MainWindow", u"Classifying Image", None))
-        self.loadingStatus.setText(QCoreApplication.translate("MainWindow", u"Please Wait ...", None))
+        self.classifyingLabel.setText("")
+        self.loadingStatus.setText("")
         self.uploadButton.setText(QCoreApplication.translate("MainWindow", u"Upload Image", None))
-        self.uploadButton_2.setText(QCoreApplication.translate("MainWindow", u"Classify", None))
+        self.classifyButton.setText(QCoreApplication.translate("MainWindow", u"Classify", None))
     # retranslateUi
 
