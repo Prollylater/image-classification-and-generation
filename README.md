@@ -7,6 +7,7 @@ The Image generation will be like the other process but this time the user will 
  
 ## Instructions
 
+To launch the application all you need to do is to execute the main.py file.
 The Application will present at first a loading screen and after that the main screen will be open and you will have to choose Classification or Generation :
 
 ### Classification :
