@@ -3,6 +3,9 @@
 #APP Imports
 import sys
 
+from PySide2.QtGui import QColor
+from PySide2.QtWidgets import QMainWindow, QGraphicsDropShadowEffect, QApplication
+
 from HomeScreen.homeScreen import HomeScreenWindow
 
 from PySide2 import QtCore, QtGui, QtWidgets
@@ -11,7 +14,7 @@ from PySide2 import QtCore, QtGui, QtWidgets
 #pyrcc to change from qrc to py
 
 #Import user interface file
-from ui_splashScreen import *
+from LoadingScreen import ui_loadingScreen
 progressBarValue = 0
 
 
@@ -19,7 +22,7 @@ progressBarValue = 0
 class LoadingScreenWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        self.ui = Ui_SplashScreen()
+        self.ui = ui_loadingScreen.Ui_MainScreen()
         self.ui.setupUi(self)
         #center the window
         self.center()

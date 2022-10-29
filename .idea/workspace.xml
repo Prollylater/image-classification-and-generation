@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cb042a80-34a2-4ac0-878d-5dcc592c4dbf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoadingScreen/loadingScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/LoadingScreen/loadingScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoadingScreen/splashScreen.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoadingScreen/ui_splashScreen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +52,7 @@
       <recent name="$PROJECT_DIR$/LoadingScreen" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.animalsScreen">
+  <component name="RunManager" selected="Python.main">
     <configuration name="animalsScreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="image-classification-and-generation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.animalsScreen" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.loadingScreen" />
+        <item itemvalue="Python.animalsScreen" />
         <item itemvalue="Python.homeScreen" />
         <item itemvalue="Python.classifyCategoriesScreen" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>

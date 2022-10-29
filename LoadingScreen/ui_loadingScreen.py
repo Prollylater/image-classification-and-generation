@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splashScreen.ui'
+## Form generated from reading UI file 'loadingScreen.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,14 +12,14 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-import splash_screen_rc
+from LoadingScreen import splash_screen_rc
 
-class Ui_SplashScreen(object):
-    def setupUi(self, SplashScreen):
-        if not SplashScreen.objectName():
-            SplashScreen.setObjectName(u"SplashScreen")
-        SplashScreen.resize(800, 600)
-        self.centralwidget = QWidget(SplashScreen)
+class Ui_MainScreen(object):
+    def setupUi(self, MainScreen):
+        if not MainScreen.objectName():
+            MainScreen.setObjectName(u"MainScreen")
+        MainScreen.resize(800, 600)
+        self.centralwidget = QWidget(MainScreen)
         self.centralwidget.setObjectName(u"centralwidget")
         self.mainFrame = QFrame(self.centralwidget)
         self.mainFrame.setObjectName(u"mainFrame")
@@ -81,16 +81,16 @@ class Ui_SplashScreen(object):
 "	border-radius:10px;\n"
 "}")
         self.progressBar.setValue(24)
-        SplashScreen.setCentralWidget(self.centralwidget)
+        MainScreen.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(SplashScreen)
+        self.retranslateUi(MainScreen)
 
-        QMetaObject.connectSlotsByName(SplashScreen)
+        QMetaObject.connectSlotsByName(MainScreen)
     # setupUi
 
-    def retranslateUi(self, SplashScreen):
-        SplashScreen.setWindowTitle(QCoreApplication.translate("SplashScreen", u"MainWindow", None))
-        self.initializing.setText(QCoreApplication.translate("SplashScreen", u"Initializing App", None))
-        self.loadingStatus.setText(QCoreApplication.translate("SplashScreen", u"Please Wait ...", None))
+    def retranslateUi(self, MainScreen):
+        MainScreen.setWindowTitle(QCoreApplication.translate("MainScreen", u"MainWindow", None))
+        self.initializing.setText(QCoreApplication.translate("MainScreen", u"Initializing App", None))
+        self.loadingStatus.setText(QCoreApplication.translate("MainScreen", u"Please Wait ...", None))
     # retranslateUi
 
