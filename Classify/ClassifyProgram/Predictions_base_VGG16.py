@@ -12,7 +12,7 @@ from keras.preprocessing import image
 from keras.utils import load_img
 
 # load an image from file at VGG16 input size
-image = load_img('../input/animal-image-dataset-90-different-animals/animals/animals/butterfly/016caf0681.jpg',
+image = load_img('cat.jpg',
                  target_size=(224, 224))
 
 from keras.utils import img_to_array
@@ -32,8 +32,6 @@ predict_img = vggmodel.predict(imgbatch)
 predict_img
 # Decode the three most likly predictions mad by the model
 predict = decode_predictions(predict_img)
-
- 
 
 
 # print to Image with title

@@ -9,13 +9,13 @@ import keras
 from keras import models
 
 #Load model from wherever
-model = tf.keras.models.load_model('.h5')
+model = tf.keras.models.load_model('Models and dictionnary/vgg16_animalst.h5')
 
 #Show model architecture
 model.summary()
 
 #Load associated dictionary
-dic= open(".pkl", "rb")
+dic= open("Models and dictionnary/Animalsdic.pkl", "rb")
 dictionary = pickle.load(dic)
 
 
@@ -24,7 +24,7 @@ from keras.preprocessing import image
 from keras.utils import load_img
 
 # load an image from file at VGG16 input size
-image = load_img('',
+image = load_img('cat.jpg',
                  target_size=(224, 224))
 
 from keras.utils import img_to_array
