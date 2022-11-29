@@ -4,6 +4,10 @@
     <list default="true" id="cb042a80-34a2-4ac0-878d-5dcc592c4dbf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classify/ClassifyProgram/PredictionFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/ClassifyProgram/PredictionFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classify/ClassifyProgram/Prediction_Custom_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classify/ClassifyProgram/Predictions_base_VGG16.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classify/ClassifyProgram/cat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classify/animalsScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/animalsScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +54,7 @@
       <recent name="$PROJECT_DIR$/LoadingScreen" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.classifyCategoriesScreen">
     <configuration name="animalsScreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="image-classification-and-generation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,9 +162,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.classifyCategoriesScreen" />
         <item itemvalue="Python.animalsScreen" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.classifyCategoriesScreen" />
         <item itemvalue="Python.loadingScreen" />
         <item itemvalue="Python.homeScreen" />
       </list>

@@ -6,7 +6,7 @@ import sys
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtWidgets import *
 from PyQt5 import Qt
-from ClassifyProgram import PredictionFunctions
+from Classify.ClassifyProgram.PredictionFunctions import PredictWithBaseModel
 
 #pyside2-uic to change from ui to py
 #pyrcc to change from qrc to py
@@ -167,7 +167,7 @@ class AnimalsScreenWindow(QMainWindow):
         return pixmapPath
 
     def connectButton(self):
-        PredictionFunctions.PredictWithBaseModel(pixmapPath)
+        PredictWithBaseModel(pixmapPath)
 
 
 
