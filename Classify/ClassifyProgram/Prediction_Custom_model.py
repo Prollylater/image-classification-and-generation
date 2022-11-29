@@ -38,12 +38,10 @@ from keras.applications.vgg16 import preprocess_input
 imgbatch = np.expand_dims(imgarr, axis=0)
  
 
-imgarr = imgarr.reshape(1, 224, 224, 3)
+#imgarr = imgarr.reshape(1, 224, 224, 3)
 # predict the probability across all output classes
 prediction = model.predict(imgbatch)
 
-# convert the probabilities to class labels
-predmodel = decode_predictions(prediction[0])
 
 # Join classifaction score
 score = tf.nn.softmax(prediction[0])
