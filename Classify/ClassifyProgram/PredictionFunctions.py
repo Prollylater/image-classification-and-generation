@@ -1,4 +1,4 @@
-def PredictWithBaseModel():
+def PredictWithBaseModel(pixmap):
     from keras.utils import load_img
     from keras.utils import img_to_array
     from keras.applications.vgg16 import preprocess_input
@@ -7,7 +7,7 @@ def PredictWithBaseModel():
     # load the model
     model = VGG16()
     # load an image from file
-    image = load_img('cat.jpg', target_size=(224, 224))
+    image = load_img(pixmap, target_size=(224, 224))
     # convert the image pixels to a numpy array
     image = img_to_array(image)
     # reshape data for the model
@@ -18,9 +18,8 @@ def PredictWithBaseModel():
     yhat = model.predict(image)
     # convert the probabilities to class labels
     label = decode_predictions(yhat)
-    # retrieve the most likely result, e.g. highest probability
+    # retrieve the most likely result, e.g. the highest probability
     label = label[0][0]
     # print the classification
-    print('%s (%.2f%%)' % (label[1], label[2] * 100))
+    return print('%s (%.2f%%)' % (label[1], label[2] * 100))
 
-PredictWithBaseModel()

@@ -6,6 +6,7 @@ import sys
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtWidgets import *
 from PyQt5 import Qt
+from ClassifyProgram import PredictionFunctions
 
 #pyside2-uic to change from ui to py
 #pyrcc to change from qrc to py
@@ -13,6 +14,7 @@ from PyQt5 import Qt
 #Import user interface file
 from Classify import ui_classifyScreen
 progressBarValue = 0
+pixmapPath = None
 
 #Main Class
 class AnimalsScreenWindow(QMainWindow):
@@ -54,7 +56,7 @@ class AnimalsScreenWindow(QMainWindow):
 
         #Classify Button
         self.ui.classifyButton.clicked.connect(self.openTimer)
-
+        self.ui.classifyButton.clicked.connect(self.connectButton)
 
 
         #Move window on mouse drag event on the title bar
@@ -159,6 +161,16 @@ class AnimalsScreenWindow(QMainWindow):
         # Add the image to the frame
         self.label = self.findChild(QLabel, "label")
         self.label.setPixmap(self.pixmap)
+        #fname[0] is the path of the image used in pixmap ! :D need to be used in the predict function
+        global pixmapPath
+        pixmapPath = fname[0]
+        return pixmapPath
+
+    def connectButton(self):
+        PredictionFunctions.PredictWithBaseModel(pixmapPath)
+
+
+
 
 
 #executable command
