@@ -51,7 +51,7 @@
       <recent name="$PROJECT_DIR$/LoadingScreen" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.animalsScreen">
     <configuration name="animalsScreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="image-classification-and-generation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,10 +159,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.animalsScreen" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.classifyCategoriesScreen" />
         <item itemvalue="Python.loadingScreen" />
-        <item itemvalue="Python.animalsScreen" />
         <item itemvalue="Python.homeScreen" />
       </list>
     </recent_temporary>
