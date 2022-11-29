@@ -198,6 +198,26 @@ class Ui_AnimalsWindow(object):
 "	font-size : 17px;\n"
 "}\n"
 "")
+        self.TitleOfClassification = QLabel(self.MainFrame)
+        self.TitleOfClassification.setObjectName(u"TitleOfClassification")
+        self.TitleOfClassification.setGeometry(QRect(590, 240, 311, 41))
+        font3 = QFont()
+        font3.setPointSize(19)
+        self.TitleOfClassification.setFont(font3)
+        self.TitleOfClassification.setStyleSheet(u"background-color:transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"border: none;")
+        self.TitleOfClassification.setAlignment(Qt.AlignCenter)
+        self.resultClassify = QLabel(self.MainFrame)
+        self.resultClassify.setObjectName(u"resultClassify")
+        self.resultClassify.setGeometry(QRect(590, 310, 311, 41))
+        font4 = QFont()
+        font4.setPointSize(14)
+        self.resultClassify.setFont(font4)
+        self.resultClassify.setStyleSheet(u"background-color:transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"border: none;")
+        self.resultClassify.setAlignment(Qt.AlignCenter)
         self.logo.raise_()
         self.circle1.raise_()
         self.circle2.raise_()
@@ -212,6 +232,8 @@ class Ui_AnimalsWindow(object):
         self.loadingStatus.raise_()
         self.uploadButton.raise_()
         self.classifyButton.raise_()
+        self.TitleOfClassification.raise_()
+        self.resultClassify.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -229,5 +251,7 @@ class Ui_AnimalsWindow(object):
         self.loadingStatus.setText("")
         self.uploadButton.setText(QCoreApplication.translate("MainWindow", u"Upload Image", None))
         self.classifyButton.setText(QCoreApplication.translate("MainWindow", u"Classify", None))
+        self.TitleOfClassification.setText("")
+        self.resultClassify.setText("")
     # retranslateUi
 

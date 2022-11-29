@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cb042a80-34a2-4ac0-878d-5dcc592c4dbf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classify/ClassifyProgram/PredictionFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/ClassifyProgram/PredictionFunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classify/ClassifyProgram/Prediction_Custom_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classify/ClassifyProgram/Predictions_base_VGG16.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classify/ClassifyProgram/cat.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Classify/animalsScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/animalsScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classify/classifyScreen.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/classifyScreen.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classify/ui_classifyScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/ui_classifyScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +49,7 @@
       <recent name="$PROJECT_DIR$/ClassifyCategoriesScreen" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rahmo\OneDrive\Documents\Git\image-classification-and-generation\Classify" />
       <recent name="$PROJECT_DIR$/LoadingScreen" />
     </key>
   </component>

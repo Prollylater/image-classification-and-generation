@@ -471,6 +471,58 @@ QPushButton:hover{
       <string>Classify</string>
      </property>
     </widget>
+    <widget class="QLabel" name="TitleOfClassification">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>240</y>
+       <width>311</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>19</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color: rgb(255, 255, 255);
+border: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="resultClassify">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>310</y>
+       <width>311</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color: rgb(255, 255, 255);
+border: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
     <zorder>logo</zorder>
     <zorder>circle1</zorder>
     <zorder>circle2</zorder>
@@ -485,6 +537,8 @@ QPushButton:hover{
     <zorder>loadingStatus</zorder>
     <zorder>uploadButton</zorder>
     <zorder>classifyButton</zorder>
+    <zorder>TitleOfClassification</zorder>
+    <zorder>resultClassify</zorder>
    </widget>
   </widget>
  </widget>

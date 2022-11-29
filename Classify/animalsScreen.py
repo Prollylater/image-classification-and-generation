@@ -14,7 +14,6 @@ from Classify.ClassifyProgram.PredictionFunctions import PredictWithBaseModel
 #Import user interface file
 from Classify import ui_classifyScreen
 progressBarValue = 0
-pixmapPath = None
 
 #Main Class
 class AnimalsScreenWindow(QMainWindow):
@@ -55,7 +54,6 @@ class AnimalsScreenWindow(QMainWindow):
         self.ui.uploadButton.clicked.connect(self.resetTimerAndUploadImage)
 
         #Classify Button
-        self.ui.classifyButton.clicked.connect(self.openTimer)
         self.ui.classifyButton.clicked.connect(self.connectButton)
 
 
@@ -168,6 +166,8 @@ class AnimalsScreenWindow(QMainWindow):
 
     def connectButton(self):
         PredictWithBaseModel(pixmapPath)
+        self.openTimer()
+
 
 
 
