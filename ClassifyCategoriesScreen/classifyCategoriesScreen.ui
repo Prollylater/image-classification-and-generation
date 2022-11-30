@@ -157,6 +157,7 @@ background-color: transparent;</string>
        <string notr="true">background-color:transparent;
 image:none;
 color: #fff;
+font: 11pt &quot;Futura Md BT&quot;;
 </string>
       </property>
       <property name="text">

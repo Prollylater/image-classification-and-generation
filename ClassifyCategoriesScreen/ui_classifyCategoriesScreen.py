@@ -79,6 +79,7 @@ class Ui_ClassifyCategoriesWindow(object):
         self.GoBack.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
 "color: #fff;\n"
+"font: 11pt \"Futura Md BT\";\n"
 "")
         self.circle3 = QFrame(self.MainFrame)
         self.circle3.setObjectName(u"circle3")
