@@ -19,7 +19,7 @@ progressBarValue = 0
 class AnimalsScreenWindow(QMainWindow):
     def __init__(self):
         ui_classifyScreen.QMainWindow.__init__(self)
-        self.ui = ui_classifyScreen.Ui_AnimalsWindow()
+        self.ui = ui_classifyScreen.Ui_ClassifyWindow()
         self.ui.setupUi(self)
         self.center()
 
@@ -33,6 +33,9 @@ class AnimalsScreenWindow(QMainWindow):
         self.setWindowIcon(QtGui.QIcon(":/Images/Images/logoDeskApp.png"))
         # Set Window title
         self.setWindowTitle("CGI App")
+
+        #Font Downlaod
+        QtGui.QFontDatabase.addApplicationFont("Resources/Futura Md BT.ttf")
 
         #Apply shadow effect
         self.shadow = ui_classifyScreen.QGraphicsDropShadowEffect(self)
@@ -114,6 +117,9 @@ class AnimalsScreenWindow(QMainWindow):
             #change the Status text
             from _ast import Lambda
             QtCore.QTimer.singleShot(0,lambda :self.ui.loadingStatus.setText("Loading completed"))
+            QtCore.QTimer.singleShot(0, lambda: self.ui.TitleOfClassification.setText("Result of the Classification :"))
+            QtCore.QTimer.singleShot(0, lambda: self.ui.resultClassify.setText(resultOfClassification))
+
 
         elif progressBarValue < 2:
             QtCore.QTimer.singleShot(0, lambda: self.ui.classifyingLabel.setText("Classifying Image"))
@@ -132,6 +138,7 @@ class AnimalsScreenWindow(QMainWindow):
 
         elif progressBarValue < 100:
             QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText("Loading results"))
+
 
         #increase progressBarValue by 1 after time interval in millisecond;
         progressBarValue +=1
@@ -152,6 +159,9 @@ class AnimalsScreenWindow(QMainWindow):
         self.ui.progressBar.setValue(progressBarValue)
         QtCore.QTimer.singleShot(0, lambda: self.ui.classifyingLabel.setText(""))
         QtCore.QTimer.singleShot(0, lambda: self.ui.loadingStatus.setText(""))
+        QtCore.QTimer.singleShot(0, lambda: self.ui.TitleOfClassification.setText(""))
+        QtCore.QTimer.singleShot(0, lambda: self.ui.resultClassify.setText(""))
+
         #Uplaod Image to frame
         fname = QFileDialog.getOpenFileName(self, "Upload the animal Picture", "", "Images (*.jpg *.png)")
         # Open the Image
@@ -165,12 +175,10 @@ class AnimalsScreenWindow(QMainWindow):
         return pixmapPath
 
     def connectButton(self):
-        PredictWithBaseModel(pixmapPath)
+        #PredictWithBaseModel(pixmapPath)
+        global resultOfClassification
+        resultOfClassification = PredictWithBaseModel(pixmapPath)
         self.openTimer()
-
-
-
-
 
 
 #executable command

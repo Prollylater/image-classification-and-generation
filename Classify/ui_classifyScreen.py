@@ -14,7 +14,7 @@ from PySide2.QtWidgets import *
 
 from HomeScreen import home_screen_rc
 
-class Ui_AnimalsWindow(object):
+class Ui_ClassifyWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -54,6 +54,7 @@ class Ui_AnimalsWindow(object):
         self.GoBack.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
 "color: #fff;\n"
+"font: 11pt \"Futura Md BT\";\n"
 "")
         self.circle3 = QFrame(self.MainFrame)
         self.circle3.setObjectName(u"circle3")
@@ -132,10 +133,14 @@ class Ui_AnimalsWindow(object):
         font = QFont()
         font.setFamily(u"Futura Md BT")
         font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(1)
         self.classifyingLabel.setFont(font)
         self.classifyingLabel.setStyleSheet(u"background-color:transparent;\n"
 "color: rgb(255, 255, 255);\n"
-"border: none;")
+"border: none;\n"
+"font: 10 pt \"Futura Md BT\";")
         self.classifyingLabel.setAlignment(Qt.AlignCenter)
         self.progressBar = QProgressBar(self.MainFrame)
         self.progressBar.setObjectName(u"progressBar")
@@ -165,19 +170,24 @@ class Ui_AnimalsWindow(object):
         self.uploadButton.setObjectName(u"uploadButton")
         self.uploadButton.setGeometry(QRect(120, 500, 141, 41))
         font2 = QFont()
+        font2.setFamily(u"Futura Md BT")
+        font2.setPointSize(11)
+        font2.setBold(False)
+        font2.setItalic(False)
+        font2.setWeight(50)
         self.uploadButton.setFont(font2)
         self.uploadButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.uploadButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
-"	font-size: 14px;\n"
+"	font: 11pt \"Futura Md BT\";\n"
 "}\n"
 "QPushButton:hover{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
-"	font-size : 17px;\n"
+"	font: 13pt \"Futura Md BT\";\n"
 "}\n"
 "")
         self.classifyButton = QPushButton(self.MainFrame)
@@ -189,34 +199,44 @@ class Ui_AnimalsWindow(object):
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
-"	font-size: 14px;\n"
+"	font: 11pt \"Futura Md BT\";\n"
 "}\n"
 "QPushButton:hover{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
-"	font-size : 17px;\n"
+"	font: 13pt \"Futura Md BT\";\n"
 "}\n"
 "")
         self.TitleOfClassification = QLabel(self.MainFrame)
         self.TitleOfClassification.setObjectName(u"TitleOfClassification")
-        self.TitleOfClassification.setGeometry(QRect(590, 240, 311, 41))
+        self.TitleOfClassification.setGeometry(QRect(570, 230, 391, 41))
         font3 = QFont()
+        font3.setFamily(u"Futura Md BT")
         font3.setPointSize(19)
+        font3.setBold(False)
+        font3.setItalic(False)
+        font3.setWeight(50)
         self.TitleOfClassification.setFont(font3)
         self.TitleOfClassification.setStyleSheet(u"background-color:transparent;\n"
+"font: 19pt \"Futura Md BT\";\n"
 "color: rgb(255, 255, 255);\n"
 "border: none;")
         self.TitleOfClassification.setAlignment(Qt.AlignCenter)
         self.resultClassify = QLabel(self.MainFrame)
         self.resultClassify.setObjectName(u"resultClassify")
-        self.resultClassify.setGeometry(QRect(590, 310, 311, 41))
+        self.resultClassify.setGeometry(QRect(570, 310, 381, 161))
         font4 = QFont()
+        font4.setFamily(u"Futura Md BT")
         font4.setPointSize(14)
+        font4.setBold(False)
+        font4.setItalic(False)
+        font4.setWeight(50)
         self.resultClassify.setFont(font4)
         self.resultClassify.setStyleSheet(u"background-color:transparent;\n"
 "color: rgb(255, 255, 255);\n"
-"border: none;")
+"border: none;\n"
+"font: 14pt \"Futura Md BT\";")
         self.resultClassify.setAlignment(Qt.AlignCenter)
         self.logo.raise_()
         self.circle1.raise_()

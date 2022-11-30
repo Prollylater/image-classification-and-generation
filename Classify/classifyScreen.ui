@@ -106,6 +106,7 @@ background-color: transparent;</string>
        <string notr="true">background-color:transparent;
 image:none;
 color: #fff;
+font: 11pt &quot;Futura Md BT&quot;;
 </string>
       </property>
       <property name="text">
@@ -334,12 +335,16 @@ border-radius : 20px;</string>
       <font>
        <family>Futura Md BT</family>
        <pointsize>10</pointsize>
+       <weight>1</weight>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:transparent;
 color: rgb(255, 255, 255);
-border: none;</string>
+border: none;
+font: 10 pt &quot;Futura Md BT&quot;;</string>
      </property>
      <property name="text">
       <string/>
@@ -410,7 +415,11 @@ border: none;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
+       <family>Futura Md BT</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
      </property>
      <property name="cursor">
@@ -421,13 +430,13 @@ border: none;</string>
 	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
-	font-size: 14px;
+	font: 11pt &quot;Futura Md BT&quot;;
 }
 QPushButton:hover{
 	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
-	font-size : 17px;
+	font: 13pt &quot;Futura Md BT&quot;;
 }
 </string>
      </property>
@@ -446,7 +455,11 @@ QPushButton:hover{
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
+       <family>Futura Md BT</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
      </property>
      <property name="cursor">
@@ -457,13 +470,13 @@ QPushButton:hover{
 	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
-	font-size: 14px;
+	font: 11pt &quot;Futura Md BT&quot;;
 }
 QPushButton:hover{
 	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
-	font-size : 17px;
+	font: 13pt &quot;Futura Md BT&quot;;
 }
 </string>
      </property>
@@ -474,19 +487,24 @@ QPushButton:hover{
     <widget class="QLabel" name="TitleOfClassification">
      <property name="geometry">
       <rect>
-       <x>590</x>
-       <y>240</y>
-       <width>311</width>
+       <x>570</x>
+       <y>230</y>
+       <width>391</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <family>Futura Md BT</family>
        <pointsize>19</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:transparent;
+font: 19pt &quot;Futura Md BT&quot;;
 color: rgb(255, 255, 255);
 border: none;</string>
      </property>
@@ -500,21 +518,26 @@ border: none;</string>
     <widget class="QLabel" name="resultClassify">
      <property name="geometry">
       <rect>
-       <x>590</x>
+       <x>570</x>
        <y>310</y>
-       <width>311</width>
-       <height>41</height>
+       <width>381</width>
+       <height>161</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <family>Futura Md BT</family>
        <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:transparent;
 color: rgb(255, 255, 255);
-border: none;</string>
+border: none;
+font: 14pt &quot;Futura Md BT&quot;;</string>
      </property>
      <property name="text">
       <string/>

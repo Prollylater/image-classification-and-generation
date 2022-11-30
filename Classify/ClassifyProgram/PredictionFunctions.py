@@ -9,6 +9,10 @@ import tensorflow as tf
 import numpy as np
 from matplotlib import pyplot as plt
 
+from PySide2 import QtCore
+from Classify import animalsScreen
+from Classify import ui_classifyScreen
+
 
 def PredictWithBaseModel(pixmap):
     # load the model
@@ -28,7 +32,11 @@ def PredictWithBaseModel(pixmap):
     # retrieve the most likely result, e.g. the highest probability
     label = label[0][0]
     # print the classification
-    return print('%s (%.2f%%)' % (label[1], label[2] * 100))
+    global result
+    result = str(label[1])
+    global confidence
+    confidence = str(round(label[2]*100, 2))#Round to make the decimal to 2 max
+    return 'The picture represent a ' +result+  '\n with a confidence of ' + confidence + ' %'
 
 def PredictWithCustomModel(pixmap,dictionnary,model):
     # Load model from wherever
