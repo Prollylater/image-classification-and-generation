@@ -1,9 +1,16 @@
+from keras.utils import load_img
+from keras.utils import img_to_array
+from keras.applications.vgg16 import preprocess_input
+from keras.applications.vgg16 import decode_predictions
+from keras.applications.vgg16 import VGG16
+
+import pickle
+import tensorflow as tf
+import numpy as np
+from matplotlib import pyplot as plt
+
+
 def PredictWithBaseModel(pixmap):
-    from keras.utils import load_img
-    from keras.utils import img_to_array
-    from keras.applications.vgg16 import preprocess_input
-    from keras.applications.vgg16 import decode_predictions
-    from keras.applications.vgg16 import VGG16
     # load the model
     model = VGG16()
     # load an image from file
@@ -24,16 +31,6 @@ def PredictWithBaseModel(pixmap):
     return print('%s (%.2f%%)' % (label[1], label[2] * 100))
 
 def PredictWithCustomModel(pixmap,dictionnary,model):
-    from keras.applications.vgg16 import VGG16
-    from keras.applications.vgg16 import decode_predictions
-    import pickle
-    import tensorflow as tf
-    import numpy as np
-    from matplotlib import pyplot as plt
-    import math
-    import keras
-    from keras import models
-
     # Load model from wherever
     model = tf.keras.models.load_model('Models and dictionnary/'+ model +'.h5')
 
@@ -84,11 +81,6 @@ def PredictWithCustomModel(pixmap,dictionnary,model):
 
 
 def OtherPredictionWithVGG16(pixmap):
-    from keras.applications.vgg16 import VGG16
-    from keras.applications.vgg16 import decode_predictions
-    from matplotlib import pyplot as plt
-    import keras
-    import numpy as np
     # load the model VGG16
     vggmodel = VGG16(weights='imagenet')
     vggmodel.trainable = False  # Freeze VGG-16 for now
