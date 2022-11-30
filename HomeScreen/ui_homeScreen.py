@@ -34,19 +34,25 @@ class Ui_MainWindow(object):
         self.classifyButton.setObjectName(u"classifyButton")
         self.classifyButton.setGeometry(QRect(270, 490, 221, 51))
         font = QFont()
-        font.setPointSize(17)
+        font.setFamily(u"Futura Md BT")
+        font.setPointSize(15)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.classifyButton.setFont(font)
         self.classifyButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.classifyButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
+"	font: 15pt \"Futura Md BT\";\n"
 "}\n"
 "QPushButton:hover{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
-"	font-size : 25px;\n"
+"	font: 17pt \"Futura Md BT\";\n"
+"\n"
 "}\n"
 "")
         self.circle1 = QFrame(self.MainFrame)
@@ -98,12 +104,14 @@ class Ui_MainWindow(object):
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
+"	font: 15pt \"Futura Md BT\";\n"
 "}\n"
 "QPushButton:hover{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
 "	font-size : 25px;\n"
+"	font: 17pt \"Futura Md BT\";\n"
 "}\n"
 "")
         self.windowNav = QFrame(self.MainFrame)

@@ -41,7 +41,11 @@ border-radius: 25px;</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>17</pointsize>
+         <family>Futura Md BT</family>
+         <pointsize>15</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="cursor">
@@ -52,12 +56,14 @@ border-radius: 25px;</string>
 	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
+	font: 15pt &quot;Futura Md BT&quot;;
 }
 QPushButton:hover{
 	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
-	font-size : 25px;
+	font: 17pt &quot;Futura Md BT&quot;;
+
 }
 </string>
        </property>
@@ -193,7 +199,11 @@ background-color:transparent;</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>17</pointsize>
+         <family>Futura Md BT</family>
+         <pointsize>15</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="cursor">
@@ -207,12 +217,14 @@ background-color:transparent;</string>
 	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
+	font: 15pt &quot;Futura Md BT&quot;;
 }
 QPushButton:hover{
 	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgb(63, 102, 120), stop:1 #f16150);
 	color:#fff;
 	border-radius:10px;
 	font-size : 25px;
+	font: 17pt &quot;Futura Md BT&quot;;
 }
 </string>
        </property>
