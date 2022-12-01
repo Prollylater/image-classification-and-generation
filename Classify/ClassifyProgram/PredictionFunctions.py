@@ -10,9 +10,6 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 from PySide2 import QtCore
-from Classify import animalsScreen
-from Classify import ui_classifyScreen
-
 
 def PredictWithBaseModel(pixmap):
     # load the model
@@ -36,17 +33,17 @@ def PredictWithBaseModel(pixmap):
     result = str(label[1])
     global confidence
     confidence = str(round(label[2]*100, 2))#Round to make the decimal to 2 max
-    return 'The picture represent a ' +result+  '\n with a confidence of ' + confidence + ' %'
+    return 'The picture most likely belongs to ' + result + '\n with a ' + confidence + ' % of confidence'
 
 def PredictWithCustomModel(pixmap,dictionnary,model):
     # Load model from wherever
-    model = tf.keras.models.load_model('Models and dictionnary/'+ model +'.h5')
+    model = tf.keras.models.load_model("Classify/ClassifyProgram/Models and dictionnary/"+ model +".h5")
 
     # Show model architecture
     model.summary()
 
     # Load associated dictionary
-    dic = open("Models and dictionnary/"+ dictionnary +".pkl", "rb")
+    dic = open("Classify/ClassifyProgram/Models and dictionnary/"+ dictionnary +".pkl", "rb")
     dictionary = pickle.load(dic)
 
     # Loading image
@@ -74,18 +71,24 @@ def PredictWithCustomModel(pixmap,dictionnary,model):
     # Join classifaction score
     score = tf.nn.softmax(prediction[0])
 
-    print(
-        "{} most likely belongs to {} with a {:.2f} percent confidence."
-        .format("Image inputted :", dictionary[np.argmax(score)], 100 * np.max(score))
-    )
+    global resultCustom
+    resultCustom = str(dictionary[np.argmax(score)])
+    global confidenceCustom
+    confidenceCustom = str(round(100*100 * np.max(score),2))  # Round to make the decimal to 2 max
+    return 'The picture most likely belongs to ' + resultCustom + '\n with a ' + confidenceCustom + ' % of confidence'
+
+    #print(
+        #"{} most likely belongs to {} with a {:.2f} percent confidence."
+       # .format("Image inputted :", , )
+   # )
 
     # print to verify shape
-    plt.figure(figsize=(2, 2))
+    #plt.figure(figsize=(2, 2))
     # plt.imshow((imgarr[0]).astype('uint8'))
-    plt.imshow((image))
-    plt.title("{}:{:.2f}".format(dictionary[np.argmax(score)],
-                                 100 * np.max(score)))  # remplacer par label, 100 * np.max(score)))
-    plt.axis('off')
+    #plt.imshow((image))
+    #plt.title("{}:{:.2f}".format(dictionary[np.argmax(score)],
+                                 #100 * np.max(score)))  # remplacer par label, 100 * np.max(score)))
+    #plt.axis('off')
 
 
 def OtherPredictionWithVGG16(pixmap):

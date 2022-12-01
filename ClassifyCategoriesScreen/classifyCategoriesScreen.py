@@ -52,6 +52,8 @@ class ClassifyCategoriesScreenWindow(QMainWindow):
         self.ui.GoBack.clicked.connect(self.openHomeWindow)
         #Animals Button
         self.ui.AnimalsButton.clicked.connect(self.openAnimalsWindow)
+        #Plants Button
+        self.ui.PlantsButton.clicked.connect(self.openPlantsWindow)
 
 
         #Move window on mouse drag event on the title bar
@@ -92,6 +94,12 @@ class ClassifyCategoriesScreenWindow(QMainWindow):
     def openAnimalsWindow(self):
         from Classify.animalsScreen import AnimalsScreenWindow
         self.window = AnimalsScreenWindow()
+        ClassifyCategoriesScreenWindow.close(self)
+        self.window.show()
+
+    def openPlantsWindow(self):
+        from Classify.plantScreen import PlantScreenWindow
+        self.window = PlantScreenWindow()
         ClassifyCategoriesScreenWindow.close(self)
         self.window.show()
 
