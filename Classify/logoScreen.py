@@ -6,7 +6,7 @@ import sys
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtWidgets import *
 from PyQt5 import Qt
-from Classify.ClassifyProgram.PredictionFunctions import PredictWithBaseModel
+from Classify.ClassifyProgram.PredictionFunctions import PredictWithCustomModel
 
 #pyside2-uic to change from ui to py
 #pyrcc to change from qrc to py
@@ -16,7 +16,7 @@ from Classify import ui_classifyScreen
 progressBarValue = 0
 
 #Main Class
-class AnimalsScreenWindow(QMainWindow):
+class LogoScreenWindow(QMainWindow):
     def __init__(self):
         ui_classifyScreen.QMainWindow.__init__(self)
         self.ui = ui_classifyScreen.Ui_ClassifyWindow()
@@ -163,7 +163,7 @@ class AnimalsScreenWindow(QMainWindow):
         QtCore.QTimer.singleShot(0, lambda: self.ui.resultClassify.setText(""))
 
         #Uplaod Image to frame
-        fname = QFileDialog.getOpenFileName(self, "Upload the animal Picture", "", "Images (*.jpg *.png)")
+        fname = QFileDialog.getOpenFileName(self, "Upload the logo Picture", "", "Images (*.jpg *.png)")
         # Open the Image
         self.pixmap = QtGui.QPixmap(fname[0])
         # Add the image to the frame
@@ -177,12 +177,12 @@ class AnimalsScreenWindow(QMainWindow):
     def connectButton(self):
         #PredictWithBaseModel(pixmapPath)
         global resultOfClassification
-        resultOfClassification = PredictWithBaseModel(pixmapPath)
+        resultOfClassification = PredictWithCustomModel(pixmapPath,'Logodic','vgg16_Logosave1')
         self.openTimer()
 
 
 #executable command
 if __name__ == "__main__":
     app = ui_classifyScreen.QApplication(sys.argv)
-    window = AnimalsScreenWindow()
+    window = LogoScreenWindow()
     sys.exit(app.exec_())

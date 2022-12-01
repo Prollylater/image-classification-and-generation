@@ -30,7 +30,7 @@ class PlantScreenWindow(QMainWindow):
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
         # Set Window Icon
-        self.setWindowIcon(QtGui.QIcon(":/Images/Images/logoDeskApp.png"))
+        self.setWindowIcon(QtGui.QIcon("Images/logoDeskApp.png"))
         # Set Window title
         self.setWindowTitle("CGI App")
 
@@ -147,7 +147,7 @@ class PlantScreenWindow(QMainWindow):
     def openTimer(self):
         self.timer = QtCore.QTimer()
         # Time intervall in milliseconds
-        self.timer.start(50)
+        self.timer.start(30)
         progressBarValue = 0
         self.ui.progressBar.setValue(progressBarValue)
         self.timer.timeout.connect(self.classifyProgress)

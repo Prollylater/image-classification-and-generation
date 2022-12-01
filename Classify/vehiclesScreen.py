@@ -147,7 +147,7 @@ class VehiclesScreenWindow(QMainWindow):
     def openTimer(self):
         self.timer = QtCore.QTimer()
         # Time intervall in milliseconds
-        self.timer.start(50)
+        self.timer.start(30)
         progressBarValue = 0
         self.ui.progressBar.setValue(progressBarValue)
         self.timer.timeout.connect(self.classifyProgress)
@@ -163,7 +163,7 @@ class VehiclesScreenWindow(QMainWindow):
         QtCore.QTimer.singleShot(0, lambda: self.ui.resultClassify.setText(""))
 
         #Uplaod Image to frame
-        fname = QFileDialog.getOpenFileName(self, "Upload the animal Picture", "", "Images (*.jpg *.png)")
+        fname = QFileDialog.getOpenFileName(self, "Upload the vehicle Picture", "", "Images (*.jpg *.png)")
         # Open the Image
         self.pixmap = QtGui.QPixmap(fname[0])
         # Add the image to the frame

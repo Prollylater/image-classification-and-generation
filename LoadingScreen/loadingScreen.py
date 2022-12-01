@@ -27,7 +27,7 @@ class LoadingScreenWindow(QMainWindow):
         #center the window
         self.center()
         #Set Window Icon
-        self.setWindowIcon(QtGui.QIcon(":/Images/Images/logoDeskApp.png"))
+        self.setWindowIcon(QtGui.QIcon("Images/logoDeskApp.png"))
         #Set Window title
         self.setWindowTitle("CGI App")
         #Remove window title bar
@@ -50,7 +50,7 @@ class LoadingScreenWindow(QMainWindow):
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.appProgress)
         #Time intervall in milliseconds
-        self.timer.start(100)
+        self.timer.start(50)
 
         #Show window
         self.show()
