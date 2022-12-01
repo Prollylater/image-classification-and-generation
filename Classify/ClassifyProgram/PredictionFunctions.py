@@ -127,3 +127,46 @@ def OtherPredictionWithVGG16(pixmap):
     plt.imshow((imgarr[0]).astype('uint8'))
     plt.title("{}dd".format(predict))
     plt.axis('off')
+
+
+def PredictWithSecondCustomModel(pixmap,dictionnary,model):
+    # Load model from wherever
+    model = tf.keras.models.load_model("Classify/ClassifyProgram/Models and dictionnary/"+ model +".h5")
+
+    # Show model architecture
+    model.summary()
+
+    # Load associated dictionary
+    dic = open("Classify/ClassifyProgram/Models and dictionnary/"+ dictionnary +".pkl", "rb")
+    dictionary = pickle.load(dic)
+
+    # Loading image
+    from keras.preprocessing import image
+    from keras.utils import load_img
+
+    # load an image from file at VGG16 input size
+    image = load_img(pixmap,
+                     target_size=(224, 224))
+
+    from keras.utils import img_to_array
+
+    # convert the image pixels to a numpy array
+    imgarr = img_to_array(image)
+
+    from keras.applications.vgg16 import preprocess_input
+
+    # create batch
+    imgbatch = np.expand_dims(imgarr, axis=0)
+
+    # imgarr = imgarr.reshape(1, 224, 224, 3)
+    # predict the probability across all output classes
+    prediction = model.predict(imgbatch)
+
+    # Join classifaction score
+    score = tf.nn.softmax(prediction[0])
+
+    global resultCustom
+    resultCustom = str(dictionary[np.argmax(score)])
+    global confidenceCustom
+    confidenceCustom = str(round(100 * np.max(score),2))  # Round to make the decimal to 2 max
+    return 'The picture most likely belongs to ' + resultCustom + '\n with a ' + confidenceCustom + ' % of confidence'

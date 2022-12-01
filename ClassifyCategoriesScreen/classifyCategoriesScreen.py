@@ -58,6 +58,8 @@ class ClassifyCategoriesScreenWindow(QMainWindow):
         self.ui.VehicleButton.clicked.connect(self.openVehiclesWindow)
         #Logo Button
         self.ui.LogosButton.clicked.connect(self.openLogoWindow)
+        #Clothes Button
+        self.ui.ClothesButton.clicked.connect(self.openClothesWindow)
 
         #Move window on mouse drag event on the title bar
         def moveWindow(e):
@@ -115,6 +117,12 @@ class ClassifyCategoriesScreenWindow(QMainWindow):
     def openLogoWindow(self):
         from Classify.logoScreen import LogoScreenWindow
         self.window = LogoScreenWindow()
+        ClassifyCategoriesScreenWindow.close(self)
+        self.window.show()
+
+    def openClothesWindow(self):
+        from Classify.clothesScreen import ClothesScreenWindow
+        self.window = ClothesScreenWindow()
         ClassifyCategoriesScreenWindow.close(self)
         self.window.show()
 
