@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb042a80-34a2-4ac0-878d-5dcc592c4dbf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Classify/ClassifyProgram/PredictionFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/ClassifyProgram/PredictionFunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassifyCategoriesScreen/classifyCategoriesScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassifyCategoriesScreen/classifyCategoriesScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classify/classifyScreen.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/classifyScreen.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classify/ui_classifyScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classify/ui_classifyScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +39,13 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/rahmo/OneDrive/Documents/Git/image-classification-and-generation/Classify",
+    "last_opened_file_path": "C:/Users/rahmo/OneDrive/Documents/Git/image-classification-and-generation/Generate",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rahmo\OneDrive\Documents\Git\image-classification-and-generation\Generate" />
       <recent name="C:\Users\rahmo\OneDrive\Documents\Git\image-classification-and-generation\Classify" />
       <recent name="C:\Users\rahmo\OneDrive\Documents\Git\image-classification-and-generation\Classify\ClassifyProgram" />
       <recent name="$PROJECT_DIR$/ClassifyCategoriesScreen" />
@@ -96,7 +98,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="loadingScreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="generateScreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="image-classification-and-generation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,11 +106,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Generate" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LoadingScreen/loadingScreen.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Generate/generateScreen.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,10 +164,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.generateScreen" />
         <item itemvalue="Python.plantScreen" />
         <item itemvalue="Python.animalsScreen" />
         <item itemvalue="Python.classifyCategoriesScreen" />
-        <item itemvalue="Python.loadingScreen" />
       </list>
     </recent_temporary>
   </component>

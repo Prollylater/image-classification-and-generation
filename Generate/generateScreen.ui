@@ -209,7 +209,7 @@ background-color:transparent;</string>
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../HomeScreen/home_screen.qrc">
+         <iconset resource="../image-classification-and-generation/HomeScreen/home_screen.qrc">
           <normaloff>:/Images/Images/minimize.png</normaloff>:/Images/Images/minimize.png</iconset>
         </property>
         <property name="iconSize">
@@ -235,7 +235,7 @@ background-color:transparent;</string>
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../HomeScreen/home_screen.qrc">
+         <iconset resource="../image-classification-and-generation/HomeScreen/home_screen.qrc">
           <normaloff>:/Images/Images/close.png</normaloff>:/Images/Images/close.png</iconset>
         </property>
         <property name="iconSize">
@@ -290,8 +290,8 @@ background-color:transparent;</string>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>120</y>
+       <x>620</x>
+       <y>130</y>
        <width>371</width>
        <height>361</height>
       </rect>
@@ -310,7 +310,7 @@ border-radius : 20px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="../HomeScreen/home_screen.qrc">:/Images/Images/robot.png</pixmap>
+      <pixmap resource="../image-classification-and-generation/HomeScreen/home_screen.qrc">:/Images/Images/robot.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -322,11 +322,11 @@ border-radius : 20px;</string>
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="classifyingLabel">
+    <widget class="QLabel" name="generatingLabel">
      <property name="geometry">
       <rect>
-       <x>180</x>
-       <y>560</y>
+       <x>140</x>
+       <y>510</y>
        <width>201</width>
        <height>21</height>
       </rect>
@@ -356,8 +356,8 @@ font: 10 pt &quot;Futura Md BT&quot;;</string>
     <widget class="QProgressBar" name="progressBar">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>600</y>
+       <x>130</x>
+       <y>550</y>
        <width>231</width>
        <height>21</height>
       </rect>
@@ -380,8 +380,8 @@ QProgressBar::chunk{
     <widget class="QLabel" name="loadingStatus">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>627</y>
+       <x>250</x>
+       <y>577</y>
        <width>201</width>
        <height>21</height>
       </rect>
@@ -404,11 +404,11 @@ border: none;</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="uploadButton">
+    <widget class="QPushButton" name="generateButton">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>500</y>
+       <x>170</x>
+       <y>437</y>
        <width>141</width>
        <height>41</height>
       </rect>
@@ -441,15 +441,15 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Upload Image</string>
+      <string>Generate</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="classifyButton">
+    <widget class="QPushButton" name="downloadButton">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>500</y>
-       <width>141</width>
+       <x>720</x>
+       <y>530</y>
+       <width>171</width>
        <height>41</height>
       </rect>
      </property>
@@ -481,66 +481,79 @@ QPushButton:hover{
 </string>
      </property>
      <property name="text">
-      <string>Classify</string>
+      <string>Download Image</string>
      </property>
     </widget>
-    <widget class="QLabel" name="TitleOfClassification">
+    <widget class="QLineEdit" name="generateInput">
      <property name="geometry">
       <rect>
-       <x>570</x>
-       <y>230</y>
-       <width>431</width>
+       <x>60</x>
+       <y>360</y>
+       <width>361</width>
        <height>41</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <family>Futura Md BT</family>
-       <pointsize>19</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
      <property name="styleSheet">
-      <string notr="true">background-color:transparent;
-font: 19pt &quot;Futura Md BT&quot;;
-color: rgb(255, 255, 255);
-border: none;</string>
+      <string notr="true">background-color: rgba(234, 239, 244, 247);
+border : solid 2px rgb(34, 46, 59);
+border-radius : 20px;
+padding-left : 15px;</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Express your imagination here !</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="questionText1">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>240</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(212, 221, 232, 0);
+color: rgb(243, 243, 243);
+font: 11pt &quot;Futura Md BT&quot;;
+text-align : center;</string>
+     </property>
+     <property name="text">
+      <string>Hello Human !</string>
+     </property>
+     <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="resultClassify">
+    <widget class="QLabel" name="questionText1_2">
      <property name="geometry">
       <rect>
-       <x>570</x>
-       <y>310</y>
-       <width>431</width>
-       <height>161</height>
+       <x>90</x>
+       <y>270</y>
+       <width>301</width>
+       <height>51</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <family>Futura Md BT</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:transparent;
-color: rgb(255, 255, 255);
-border: none;
-font: 14pt &quot;Futura Md BT&quot;;</string>
+      <string notr="true">background-color: rgba(212, 221, 232, 0);
+color: rgb(243, 243, 243);
+font: 11pt &quot;Futura Md BT&quot;;
+text-align : center;</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Tell me what do you want to generate ?</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -555,18 +568,19 @@ font: 14pt &quot;Futura Md BT&quot;;</string>
     <zorder>windowNav</zorder>
     <zorder>robot</zorder>
     <zorder>label</zorder>
-    <zorder>classifyingLabel</zorder>
+    <zorder>generatingLabel</zorder>
     <zorder>progressBar</zorder>
     <zorder>loadingStatus</zorder>
-    <zorder>uploadButton</zorder>
-    <zorder>classifyButton</zorder>
-    <zorder>TitleOfClassification</zorder>
-    <zorder>resultClassify</zorder>
+    <zorder>generateButton</zorder>
+    <zorder>downloadButton</zorder>
+    <zorder>generateInput</zorder>
+    <zorder>questionText1</zorder>
+    <zorder>questionText1_2</zorder>
    </widget>
   </widget>
  </widget>
  <resources>
-  <include location="../HomeScreen/home_screen.qrc"/>
+  <include location="../image-classification-and-generation/HomeScreen/home_screen.qrc"/>
  </resources>
  <connections/>
 </ui>

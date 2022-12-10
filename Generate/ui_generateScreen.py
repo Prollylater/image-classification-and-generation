@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'classifyScreen.ui'
+## Form generated from reading UI file 'generateScreen.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -14,7 +14,7 @@ from PySide2.QtWidgets import *
 
 from HomeScreen import home_screen_rc
 
-class Ui_MainWindow(object):
+class Ui_GenerateWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -118,7 +118,7 @@ class Ui_MainWindow(object):
         self.robot.setFrameShadow(QFrame.Raised)
         self.label = QLabel(self.MainFrame)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(100, 120, 371, 361))
+        self.label.setGeometry(QRect(620, 130, 371, 361))
         self.label.setLayoutDirection(Qt.LeftToRight)
         self.label.setAutoFillBackground(False)
         self.label.setStyleSheet(u"background-color: rgb(12, 22, 33);\n"
@@ -127,24 +127,24 @@ class Ui_MainWindow(object):
         self.label.setScaledContents(True)
         self.label.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
         self.label.setWordWrap(True)
-        self.classifyingLabel = QLabel(self.MainFrame)
-        self.classifyingLabel.setObjectName(u"classifyingLabel")
-        self.classifyingLabel.setGeometry(QRect(180, 560, 201, 21))
+        self.generatingLabel = QLabel(self.MainFrame)
+        self.generatingLabel.setObjectName(u"generatingLabel")
+        self.generatingLabel.setGeometry(QRect(140, 510, 201, 21))
         font = QFont()
         font.setFamily(u"Futura Md BT")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(1)
-        self.classifyingLabel.setFont(font)
-        self.classifyingLabel.setStyleSheet(u"background-color:transparent;\n"
+        self.generatingLabel.setFont(font)
+        self.generatingLabel.setStyleSheet(u"background-color:transparent;\n"
 "color: rgb(255, 255, 255);\n"
 "border: none;\n"
 "font: 10 pt \"Futura Md BT\";")
-        self.classifyingLabel.setAlignment(Qt.AlignCenter)
+        self.generatingLabel.setAlignment(Qt.AlignCenter)
         self.progressBar = QProgressBar(self.MainFrame)
         self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setGeometry(QRect(170, 600, 231, 21))
+        self.progressBar.setGeometry(QRect(130, 550, 231, 21))
         self.progressBar.setStyleSheet(u"QProgressBar{\n"
 "	background-color:transparent;\n"
 "	color:transparent;\n"
@@ -157,7 +157,7 @@ class Ui_MainWindow(object):
         self.progressBar.setValue(0)
         self.loadingStatus = QLabel(self.MainFrame)
         self.loadingStatus.setObjectName(u"loadingStatus")
-        self.loadingStatus.setGeometry(QRect(290, 627, 201, 21))
+        self.loadingStatus.setGeometry(QRect(250, 577, 201, 21))
         font1 = QFont()
         font1.setFamily(u"Futura Md BT")
         font1.setPointSize(7)
@@ -166,18 +166,18 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);\n"
 "border: none;")
         self.loadingStatus.setAlignment(Qt.AlignCenter)
-        self.uploadButton = QPushButton(self.MainFrame)
-        self.uploadButton.setObjectName(u"uploadButton")
-        self.uploadButton.setGeometry(QRect(120, 500, 141, 41))
+        self.generateButton = QPushButton(self.MainFrame)
+        self.generateButton.setObjectName(u"generateButton")
+        self.generateButton.setGeometry(QRect(170, 437, 141, 41))
         font2 = QFont()
         font2.setFamily(u"Futura Md BT")
         font2.setPointSize(11)
         font2.setBold(False)
         font2.setItalic(False)
         font2.setWeight(50)
-        self.uploadButton.setFont(font2)
-        self.uploadButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.uploadButton.setStyleSheet(u"QPushButton{\n"
+        self.generateButton.setFont(font2)
+        self.generateButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.generateButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
@@ -190,12 +190,12 @@ class Ui_MainWindow(object):
 "	font: 13pt \"Futura Md BT\";\n"
 "}\n"
 "")
-        self.classifyButton = QPushButton(self.MainFrame)
-        self.classifyButton.setObjectName(u"classifyButton")
-        self.classifyButton.setGeometry(QRect(310, 500, 141, 41))
-        self.classifyButton.setFont(font2)
-        self.classifyButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.classifyButton.setStyleSheet(u"QPushButton{\n"
+        self.downloadButton = QPushButton(self.MainFrame)
+        self.downloadButton.setObjectName(u"downloadButton")
+        self.downloadButton.setGeometry(QRect(720, 530, 171, 41))
+        self.downloadButton.setFont(font2)
+        self.downloadButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.downloadButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #2b3e47, stop:1 #f16150);\n"
 "	color:#fff;\n"
 "	border-radius:10px;\n"
@@ -208,36 +208,32 @@ class Ui_MainWindow(object):
 "	font: 13pt \"Futura Md BT\";\n"
 "}\n"
 "")
-        self.TitleOfClassification = QLabel(self.MainFrame)
-        self.TitleOfClassification.setObjectName(u"TitleOfClassification")
-        self.TitleOfClassification.setGeometry(QRect(570, 230, 431, 41))
-        font3 = QFont()
-        font3.setFamily(u"Futura Md BT")
-        font3.setPointSize(19)
-        font3.setBold(False)
-        font3.setItalic(False)
-        font3.setWeight(50)
-        self.TitleOfClassification.setFont(font3)
-        self.TitleOfClassification.setStyleSheet(u"background-color:transparent;\n"
-"font: 19pt \"Futura Md BT\";\n"
-"color: rgb(255, 255, 255);\n"
-"border: none;")
-        self.TitleOfClassification.setAlignment(Qt.AlignCenter)
-        self.resultClassify = QLabel(self.MainFrame)
-        self.resultClassify.setObjectName(u"resultClassify")
-        self.resultClassify.setGeometry(QRect(570, 310, 431, 161))
-        font4 = QFont()
-        font4.setFamily(u"Futura Md BT")
-        font4.setPointSize(14)
-        font4.setBold(False)
-        font4.setItalic(False)
-        font4.setWeight(50)
-        self.resultClassify.setFont(font4)
-        self.resultClassify.setStyleSheet(u"background-color:transparent;\n"
-"color: rgb(255, 255, 255);\n"
-"border: none;\n"
-"font: 14pt \"Futura Md BT\";")
-        self.resultClassify.setAlignment(Qt.AlignCenter)
+        self.generateInput = QLineEdit(self.MainFrame)
+        self.generateInput.setObjectName(u"generateInput")
+        self.generateInput.setGeometry(QRect(60, 360, 361, 41))
+        self.generateInput.setStyleSheet(u"background-color: rgba(234, 239, 244, 247);\n"
+"border : solid 2px rgb(34, 46, 59);\n"
+"border-radius : 20px;\n"
+"padding-left : 15px;")
+        self.generateInput.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.questionText1 = QLabel(self.MainFrame)
+        self.questionText1.setObjectName(u"questionText1")
+        self.questionText1.setGeometry(QRect(190, 240, 111, 51))
+        self.questionText1.setLayoutDirection(Qt.LeftToRight)
+        self.questionText1.setStyleSheet(u"background-color: rgba(212, 221, 232, 0);\n"
+"color: rgb(243, 243, 243);\n"
+"font: 11pt \"Futura Md BT\";\n"
+"text-align : center;")
+        self.questionText1.setAlignment(Qt.AlignCenter)
+        self.questionText1_2 = QLabel(self.MainFrame)
+        self.questionText1_2.setObjectName(u"questionText1_2")
+        self.questionText1_2.setGeometry(QRect(90, 270, 301, 51))
+        self.questionText1_2.setLayoutDirection(Qt.LeftToRight)
+        self.questionText1_2.setStyleSheet(u"background-color: rgba(212, 221, 232, 0);\n"
+"color: rgb(243, 243, 243);\n"
+"font: 11pt \"Futura Md BT\";\n"
+"text-align : center;")
+        self.questionText1_2.setAlignment(Qt.AlignCenter)
         self.logo.raise_()
         self.circle1.raise_()
         self.circle2.raise_()
@@ -247,13 +243,14 @@ class Ui_MainWindow(object):
         self.windowNav.raise_()
         self.robot.raise_()
         self.label.raise_()
-        self.classifyingLabel.raise_()
+        self.generatingLabel.raise_()
         self.progressBar.raise_()
         self.loadingStatus.raise_()
-        self.uploadButton.raise_()
-        self.classifyButton.raise_()
-        self.TitleOfClassification.raise_()
-        self.resultClassify.raise_()
+        self.generateButton.raise_()
+        self.downloadButton.raise_()
+        self.generateInput.raise_()
+        self.questionText1.raise_()
+        self.questionText1_2.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -267,11 +264,13 @@ class Ui_MainWindow(object):
         self.minimizeButton.setText("")
         self.closeButton.setText("")
         self.label.setText("")
-        self.classifyingLabel.setText("")
+        self.generatingLabel.setText("")
         self.loadingStatus.setText("")
-        self.uploadButton.setText(QCoreApplication.translate("MainWindow", u"Upload Image", None))
-        self.classifyButton.setText(QCoreApplication.translate("MainWindow", u"Classify", None))
-        self.TitleOfClassification.setText("")
-        self.resultClassify.setText("")
+        self.generateButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
+        self.downloadButton.setText(QCoreApplication.translate("MainWindow", u"Download Image", None))
+        self.generateInput.setText("")
+        self.generateInput.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Express your imagination here !", None))
+        self.questionText1.setText(QCoreApplication.translate("MainWindow", u"Hello Human !", None))
+        self.questionText1_2.setText(QCoreApplication.translate("MainWindow", u"Tell me what do you want to generate ?", None))
     # retranslateUi
 

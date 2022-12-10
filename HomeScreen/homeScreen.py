@@ -49,6 +49,8 @@ class HomeScreenWindow(QMainWindow):
         self.ui.closeButton.clicked.connect(lambda: self.close())
         #Classify Button
         self.ui.classifyButton.clicked.connect(self.openClassifyWindow)
+        #Generate Button
+        self.ui.generateButton.clicked.connect(self.openGenerateWindow)
 
         #Move window on mouse drag event on the title bar
         def moveWindow(e):
@@ -84,6 +86,13 @@ class HomeScreenWindow(QMainWindow):
     def openClassifyWindow(self):
         from ClassifyCategoriesScreen.classifyCategoriesScreen import ClassifyCategoriesScreenWindow
         self.window = ClassifyCategoriesScreenWindow()
+        HomeScreenWindow.close(self)
+        self.window.show()
+
+    # Open Generate Window
+    def openGenerateWindow(self):
+        from Generate.generateScreen import GenerateWindow
+        self.window = GenerateWindow()
         HomeScreenWindow.close(self)
         self.window.show()
 
