@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://forge.univ-lyon1.fr/p1714584/image-classification-and-generation/-/blob/main/Images/logoDeskApp.png">
-    <img src="Images/logoDeskApp.png" alt="Logo" width="80" height="80">
+    <img src="Images/logoDeskApp.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">CGI - Classify and Generate Images</h3>
@@ -48,7 +48,6 @@
         <li><a href="#installation">Run the Program</a></li>
       </ul>
     </li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -58,7 +57,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Home Screen][product-screenshot]]
+[![Home Screen][homescreen]]
 
 The project represents an Python desktop app that uses the conventionnal neural network to help the user classify an image (in a category that we worked on) or to generate a random image.
 
