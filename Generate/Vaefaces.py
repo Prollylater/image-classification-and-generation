@@ -112,12 +112,12 @@ def vae_loss(y_true, y_pred):
 
 
 ##############"LOADING THE WEIGHT Of the trained model
-model_path = "C:/Users/Ruben/PycharmProjects/pythonimgc/Models/vae128.h5"
+model_path = "/Generate/vae128.h5"
 vae.load_weights(model_path)
 
 """""
-#############Reconstruction
-#A new dolder should be created
+A new dolder should be created
+
 tempfolderpath =""
 os.makedirs(tempfolderpath)
 #Image data only take a folder path and prove itself to be the best method to reconstruct i could prepare for now
