@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://forge.univ-lyon1.fr/p1714584/image-classification-and-generation/-/blob/main/Images/logoDeskApp.png">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="Images/logoDeskApp.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">CGI - Classify and Generate Images</h3>
