@@ -28,7 +28,6 @@ class Sampling(Layer):
 def Vaecreate():
    laten_dim = 256
    Imgshape= (128,128,3)
-
 ##Building the encoder part
 #Functional creation to accomadate the multi output need
  
@@ -116,41 +115,18 @@ model_path = "/Generate/vae128.h5"
 vae.load_weights(model_path)
 
 """""
-A new dolder should be created
-
-tempfolderpath =""
-os.makedirs(tempfolderpath)
+#A new dolder should be created
+def Reconstruct(tempfolderpath) :
 #Image data only take a folder path and prove itself to be the best method to reconstruct i could prepare for now
-test2_datagen = ImageDataGenerator(rescale=1./255)
-test2_generator = test2_datagen.flow_from_directory( ('/kaggle/input/celebaa/img_align_celeba/'), target_size=(128, 128),
-        batch_size=10,
-        class_mode=None)
+   test2_datagen = ImageDataGenerator(rescale=1./255)
+   test2_generator = test2_datagen.flow_from_directory(tempfolderpath, target_size=(128, 128), batch_size=10, class_mode=None)
 
-sample_img = next(test2_generator)
+   sample_img = next(test2_generator)
 
-z_points = encoder.predict(sample_img)
+   z_points = encoder.predict(sample_img)
 # reconstructed images
-reconst_images = decoder.predict(z_points)
-
-fig = plt.figure(figsize=(10, 8))
-fig.subplots_adjust(hspace=0.1, wspace=0.1)
-
-imgnumber = 4
-
-for rows in range(imgnumber):
-    img = sample_img[rows].squeeze()
-    sub = fig.add_subplot(2, imgnumber, rows + 1)
-    sub.axis('off')
-    sub.imshow(img)
-
-for rows in range(imgnumber):
-    img = reconst_images[rows].squeeze()
-    sub = fig.add_subplot(2, imgnumber, rows + imgnumber + 1)
-    sub.axis('off')
-    sub.imshow(img)
-
-#Deleting the new folder
-shutil.rmtree("temp", ignore_errors = True)
+   reconst_images = decoder.predict(z_points)
+   return reconst_images
 """""
 
 def Gen() :
