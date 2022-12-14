@@ -24,72 +24,72 @@ class Sampling(Layer):
         return samples
 
 
-laten_dim = 256
-Imgshape= (128,128,3)
+
+def Vaecreate():
+   laten_dim = 256
+   Imgshape= (128,128,3)
 
 ##Building the encoder part
 #Functional creation to accomadate the multi output need
-#def create_encoder():
-inpuenc = Input(shape=Imgshape)
-#model = rescale_layer = tf.keras.layers.Rescaling(1./255)(inpu)
-modelenc = Conv2D(filters=32,kernel_size=3,strides = 2 ,padding="same")(inpuenc)
-modelenc = BatchNormalization()(modelenc)
-modelenc = LeakyReLU(alpha =0.2)(modelenc)
-modelenc = Conv2D(filters=64,kernel_size=3,strides = 2 ,padding="same")(modelenc)
-modelenc = BatchNormalization()(modelenc)
-modelenc = LeakyReLU(alpha =0.2)(modelenc)
-modelenc = Conv2D(filters=128,kernel_size=3,strides = 2,padding="same")(modelenc)
-modelenc = BatchNormalization()(modelenc)
-modelenc = LeakyReLU(alpha =0.2)(modelenc)
-modelenc = Conv2D(filters=256,kernel_size=3,strides = 2,padding="same")(modelenc)
-modelenc = BatchNormalization()(modelenc)
-modelenc = LeakyReLU(alpha =0.2)(modelenc)
+ 
+   inpuenc = Input(shape=Imgshape)
+   modelenc = Conv2D(filters=32,kernel_size=3,strides = 2 ,padding="same")(inpuenc)
+   modelenc = BatchNormalization()(modelenc)
+   modelenc = LeakyReLU(alpha =0.2)(modelenc)
+   modelenc = Conv2D(filters=64,kernel_size=3,strides = 2 ,padding="same")(modelenc)
+   modelenc = BatchNormalization()(modelenc)
+   modelenc = LeakyReLU(alpha =0.2)(modelenc)
+   modelenc = Conv2D(filters=128,kernel_size=3,strides = 2,padding="same")(modelenc)
+   modelenc = BatchNormalization()(modelenc)
+   modelenc = LeakyReLU(alpha =0.2)(modelenc)
+   modelenc = Conv2D(filters=256,kernel_size=3,strides = 2,padding="same")(modelenc)
+   modelenc = BatchNormalization()(modelenc)
+   modelenc = LeakyReLU(alpha =0.2)(modelenc)
 
-modelenc = Flatten()(modelenc)
-modelenc = Dense(256)(modelenc)
-modelenc = LeakyReLU(alpha =0.3)(modelenc)
+   modelenc = Flatten()(modelenc)
+   modelenc = Dense(256)(modelenc)
+   modelenc = LeakyReLU(alpha =0.3)(modelenc)
 
 #dividing the layer and senging layrny variable
-means = Dense(laten_dim)(modelenc)
-logvar = Dense(laten_dim)(modelenc)
-latents = Sampling()([means, logvar])
+   means = Dense(laten_dim)(modelenc)
+   logvar = Dense(laten_dim)(modelenc)
+   latents = Sampling()([means, logvar])
 
-encoder = Model(inputs=inpuenc, outputs=[means, logvar,latents]) #encoder is returned
+   encoder = Model(inputs=inpuenc, outputs=[means, logvar,latents]) #encoder is returned
 
 #encoder.summary()
 
 
 #Building the decoder part keept out of the function
-# def create_decoder():
-inpudec = Input(shape=(laten_dim,), )
-modeldec = Dense(4 * 4 * 64, activation='relu')(inpudec)
 
-modeldec = Reshape((4, 4, 64))(modeldec)  # idk, idk at amm
-modeldec = Conv2DTranspose(filters=256, kernel_size=3, strides=2, padding="same")(modeldec)
-modeldec = BatchNormalization()(modeldec)
-modeldec = LeakyReLU(alpha=0.3)(modeldec)
-modeldec = Conv2DTranspose(filters=128, kernel_size=3, strides=2, padding="same")(modeldec)
-modeldec = BatchNormalization()(modeldec)
-modeldec = LeakyReLU(alpha=0.3)(modeldec)
-modeldec = Conv2DTranspose(filters=64, kernel_size=3, strides=2, padding="same")(modeldec)
-modeldec = BatchNormalization()(modeldec)
-modeldec = LeakyReLU(alpha=0.3)(modeldec)
-modeldec = Conv2DTranspose(filters=32, kernel_size=3, strides=2, padding="same")(modeldec)
-modeldec = BatchNormalization()(modeldec)
-modeldec = LeakyReLU(alpha=0.3)(modeldec)
+   inpudec = Input(shape=(laten_dim,), )
+   modeldec = Dense(4 * 4 * 64, activation='relu')(inpudec)
 
-modeldec = Conv2DTranspose(filters=3, kernel_size=(3, 3), strides=2, padding='same', activation='sigmoid')(modeldec)
-decoder = Model(inputs=inpudec, outputs=modeldec)  # encoder is returned
+   modeldec = Reshape((4, 4, 64))(modeldec)  # idk, idk at amm
+   modeldec = Conv2DTranspose(filters=256, kernel_size=3, strides=2, padding="same")(modeldec)
+   modeldec = BatchNormalization()(modeldec)
+   modeldec = LeakyReLU(alpha=0.3)(modeldec)
+   modeldec = Conv2DTranspose(filters=128, kernel_size=3, strides=2, padding="same")(modeldec)
+   modeldec = BatchNormalization()(modeldec)
+   modeldec = LeakyReLU(alpha=0.3)(modeldec)
+   modeldec = Conv2DTranspose(filters=64, kernel_size=3, strides=2, padding="same")(modeldec)
+   modeldec = BatchNormalization()(modeldec)
+   modeldec = LeakyReLU(alpha=0.3)(modeldec)
+   modeldec = Conv2DTranspose(filters=32, kernel_size=3, strides=2, padding="same")(modeldec)
+   modeldec = BatchNormalization()(modeldec)
+   modeldec = LeakyReLU(alpha=0.3)(modeldec)
 
-#  return Model(inputs = inpu, outputs = modeldec )
-# decoder = create_decoder()
-#decoder.summary()
+   modeldec = Conv2DTranspose(filters=3, kernel_size=(3, 3), strides=2, padding='same', activation='sigmoid')(modeldec)
+   decoder = Model(inputs=inpudec, outputs=modeldec)  # encoder is returned
 
-# COMBINE ENCODER AND DECODER THE COMPLETE THE VARIATIONAL AUTO ENCODER
-reconstructions = decoder(latents)
+ # COMBINE ENCODER AND DECODER THE COMPLETE THE VARIATIONAL AUTO ENCODER
+   reconstructions = decoder(latents)
 
-vae = Model([inpuenc], outputs=[reconstructions])
+   vae = Model([inpuenc], outputs=[reconstructions])
 
+   return vae
+
+vae = Vaecreate()
 vae.summary()
 
 #Defining loss function relative to the task
@@ -153,10 +153,10 @@ for rows in range(imgnumber):
 shutil.rmtree("temp", ignore_errors = True)
 """""
 
-
+def Gen() :
 ########################GENERATE FROM PREXISTING NOISE
-z_dim = 256
-z_samples = tf.random.normal(shape=(20, z_dim))
+   z_dim = 256
+   z_samples = tf.random.normal(shape=(20, z_dim))
 #Newly generated images is stored there
-images = decoder.predict(z_samples, steps = 2)
-
+   images = decoder.predict(z_samples, steps = 2)
+   return images
