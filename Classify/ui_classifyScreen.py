@@ -14,7 +14,7 @@ from PySide2.QtWidgets import *
 
 from HomeScreen import home_screen_rc
 
-class Ui_MainWindow(object):
+class Ui_ClassifyWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
