@@ -59,8 +59,8 @@
 
 [![Home Screen][homescreen]]
 
-The project represents an Python desktop app that uses the conventionnal neural network to help the user classify an image (in a category that we worked on) or to generate a random image.
-
+This university project is a Python desktop app that uses the conventionnal neural network to help the user upload and labelize an image. The application allow the recognition of a wide range of subject. The model were repurposed using transfer learning on kaggle to make up for our own personal limited ressource.
+The project was made in cooperation with : https://github.com/RahmonexTheOne/CGI-Classify-And-Generate-Image 
 <p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
 
